@@ -1,0 +1,5171 @@
+{
+  "___11": "=========================================================================================",
+  "___12": "*** 'newVersionApp' from it, build all apps. In top dir, delete all '.' starting files.",
+  "___13": "-----------------------------------------------------------------------------------------",
+  "newVersionApp": "D:/ofek-tools/CustomScene/new",
+  "allAppsFolder": "D:/ofek-tools/CustomScene",
+  "newVersionApp-mlev": "D:/Sync/wk/ofek/_dev/apps/wab/2.30/_wab-2.30-2030-d/server/apps/new",
+  "allAppsFolder-mlev": "D:/Sync/wk/ofek/_dev/apps/wab/2.30/_wab-2.30-2030-d/server/apps",
+  "newVersionApp-leo": "D:/ofek-tools/CustomScene/new",
+  "allAppsFolder-leo": "D:/ofek-tools/CustomScene",
+  "___21": "=========================================================================================",
+  "___22": "*** Defaults: true, true, true. If by zip, program will do zip by itself.",
+  "___23": "-----------------------------------------------------------------------------------------",
+  "isDeleteTargetAppOnFail": true,
+  "isCreateAppByZipElseByCopy": true,
+  "isCopyByNodeElseByChildProcess": true,
+  "___31": "=========================================================================================",
+  "___32": "*** 2 next constants - DON'T change",
+  "___33": "-----------------------------------------------------------------------------------------",
+  "CONFIG_VERSION": "v24_08_18",
+  "appId": "oGgwNFOg3rb76tC9",
+  "___41": "=========================================================================================",
+  "___42": "*** If app exists in 'allAppsFolder', overwrite, even if it's the 'newVersionApp' itself.",
+  "___43": "*** oblique_app_url - If no oblique app, set it to null (or empty string)",
+  "___44": "*** mapOptions - If you want initial scene view as in portal - set it to null",
+  "___45": "-----------------------------------------------------------------------------------------",
+  "flags": {
+    "Naharia_mlev": 0,
+    "Enerpoint_mlev": 0,
+    "Jerusalem_mlev": 0,
+    "Weizmann_mlev": 0,
+    "Afula": 1,
+    "Arad": 1,
+    "Amymetom": 1,
+    "Arad_Patio": 1,
+    "Arad_Public": 1,
+    "Arara_Ofek": 1,
+    "Ashkelon": 1,
+    "Atlas_New": 1,
+    "Beer_Sheva_Ramot": 1,
+    "Bridge_444": 1,
+    "doit": 1,
+    "Electricity_Live_System_Demo": 1,
+    "Gadish": 1,
+    "Galil_Mizrahi": 1,
+    "GaneiTikva": 1,
+    "GanYavne": 1,
+    "GanYavne_Moni": 1,
+    "Givat_Shmuel": 1,
+    "Harnuf": 1,
+    "Holon": 1,
+    "Jrs_Moni": 1,
+    "Jrs_Public": 1,
+    "Karni": 1,
+    "Kuseife": 1,
+    "Mate_Asher": 1,
+    "Michnaf": 1,
+    "Ministry_of_Justice": 1,
+    "Misgav": 1,
+    "Naharia": 1,
+    "Ofek_Marketing": 1,
+    "Photovoltaic": 1,
+    "Portal_Train": 1,
+    "Ramat_Hovav": 1,
+    "Road_4": 1,
+    "Shlomi": 1,
+    "TAU": 1,
+    "Technion": 1,
+    "Tveria": 1,
+    "Vtour": 1,
+    "Weizmann_Institute": 1,
+    "yonaltd": 1,
+    "Zfat": 1,
+    "ERROR": 0
+  },
+  "apps": {
+    "Naharia_mlev": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "נהריה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=naharia",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "3ef40372f4bf4794bcdad1abcc48499a",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 118.96110691307408,
+              "scale": 1079.237392583895,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3907199.9244003063,
+                "y": 3896068.9360051844,
+                "z": 9.598951774649322
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3907568.2470276016,
+                  "y": 3896272.7814185238,
+                  "z": 343.5702920919284
+                },
+                "heading": 241.03889308692592,
+                "tilt": 46.5881079233477
+              }
+            }
+          }
+        },
+        "monitorAppName": "_Ofek-Naharia-2022",
+        "titleBrowserTab": "נהריה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Naharia",
+        "mapTitle": "נהריה",
+        "mapTitleEng": "Naharia",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": [
+          {
+            "title": "GaneiTikva_Cesium",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/GaneiTikva/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Utrecht Integrated Mesh 3D Tiles",
+            "url": "https://3d.ofek-air.com/3D/Bursa_3dtiles_LOD_acroosTiles/Scene/Bursa_3dtiles_LOD_acroosTiles.json",
+            "offset": 200
+          },
+          {
+            "title": "Weizmann Institute 2022",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/Weizman/tileset.json",
+            "offset": 10
+          }
+        ],
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "openAtHeightAboveGround": 50,
+          "closeAtHeightAboveGround": 250,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Enerpoint_mlev": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אנרפוינט: אנרגיה סולארית - פתרון קל להוצאות החשמל",
+        "oblique_app_url": null,
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "d632656bd80c4c129d30509c704d34e2",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0,
+              "scale": 508.5163084446994,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3918630.6103118765,
+                "y": 3734324.0583814094,
+                "z": 1802.6884609563276
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3918630.6103118765,
+                  "y": 3734324.0583814094,
+                  "z": 1802.6884609563276
+                },
+                "heading": 359.9999987925817,
+                "tilt": 16.040664057795773
+              }
+            }
+          }
+        },
+        "monitorAppName": "_ofek-enerpoint-2020",
+        "titleBrowserTab": "אנרפוינט | אופק צילומי אויר",
+        "titleBrowserTabEng": "Enerpoint | Ofek Aerial Photography",
+        "mapTitle": "אנרפוינט",
+        "mapTitleEng": "Enerpoint",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": true,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": false,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": null,
+        "orbit45": null,
+        "orbit360": null
+      }
+    },
+    "Jerusalem_mlev": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "נהריה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=naharia",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "3ef40372f4bf4794bcdad1abcc48499a",
+        "map.mapOptions": null,
+        "monitorAppName": "_Ofek-Naharia-2022",
+        "titleBrowserTab": "נהריה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Naharia",
+        "mapTitle": "נהריה",
+        "mapTitleEng": "Naharia",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": [
+          {
+            "title": "GaneiTikva_Cesium",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/GaneiTikva/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Utrecht Integrated Mesh 3D Tiles",
+            "url": "https://3d.ofek-air.com/3D/Bursa_3dtiles_LOD_acroosTiles/Scene/Bursa_3dtiles_LOD_acroosTiles.json",
+            "offset": 200
+          },
+          {
+            "title": "Weizmann Institute 2022",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/Weizman/tileset.json",
+            "offset": 10
+          }
+        ],
+        "lakeWaterHeight": {
+          "comment": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "jeru",
+          "userPassword": "jerusalem",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Jerusalem_Widget"
+        },
+        "orbit360": null
+      }
+    },
+    "Weizmann_mlev": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "נהריה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=naharia",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "3ef40372f4bf4794bcdad1abcc48499a",
+        "map.mapOptions": null,
+        "monitorAppName": "_Ofek-Naharia-2022",
+        "titleBrowserTab": "נהריה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Naharia",
+        "mapTitle": "נהריה",
+        "mapTitleEng": "Naharia",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": [
+          {
+            "title": "GaneiTikva_Cesium",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/GaneiTikva/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Utrecht Integrated Mesh 3D Tiles",
+            "url": "https://3d.ofek-air.com/3D/Bursa_3dtiles_LOD_acroosTiles/Scene/Bursa_3dtiles_LOD_acroosTiles.json",
+            "offset": 200
+          },
+          {
+            "title": "Weizmann Institute 2022",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/Weizman/tileset.json",
+            "offset": 10
+          }
+        ],
+        "lakeWaterHeight": {
+          "comment": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": null,
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "Weizmann_Institute_Point_Location",
+          "userName": "Weizmann",
+          "userPassword": "Weizmann_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Weizmann_Institute_widget"
+        }
+      }
+    },
+    "Afula": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "עפולה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=afula",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "b54233d32b6c41b7b17d0b786d377b5a",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 5.649883315762111,
+              "scale": 2292.407542609707,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3928561.6566119995,
+                "y": 3841318.16317641,
+                "z": 766.0096250856295
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3928561.6566119995,
+                  "y": 3841318.16317641,
+                  "z": 766.0096250856295
+                },
+                "heading": 0.002931525899891157,
+                "tilt": 62.132812471348242
+              }
+            }
+          }
+        },
+        "monitorAppName": "ofek-Afula-2023",
+        "titleBrowserTab": "עפולה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Afula",
+        "mapTitle": "עיריית עפולה",
+        "mapTitleEng": "Afula",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "גושים",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Arad": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ערד- מודל תלת מימד",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=arad",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "2d5c3bc2ee734f928ca5cb3220eb8f7f",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 341.467413854049,
+              "scale": 2633.9023524847357,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3919243.1090910668,
+                "y": 3664946.1940321294,
+                "z": 1498.5870941653848
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3919243.1090910668,
+                  "y": 3664946.1940321294,
+                  "z": 1498.5870941653848
+                },
+                "heading": 23.72649503514243,
+                "tilt": 58.67467495803824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Arad-2024",
+        "titleBrowserTab": "עיריית -ערד",
+        "titleBrowserTabEng": "Arad",
+        "mapTitle": "ערד- מודל תלת מימד",
+        "mapTitleEng": "Arad",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "יעודי קרקע",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "ofek",
+          "userPassword": "ofek2022!@",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Amymetom": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אמי מתום – פרויקט מסוף עתידים",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "997ad5b419024db1aaca03d632a46cbc",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 341.467413854049,
+              "scale": 2633.9023524847357,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3847910.975140565,
+                "y": 3719036.9273936287,
+                "z": 988.4818877475336
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3879384.527908028,
+                  "y": 3777065.4839962376,
+                  "z": 853.045161225833
+                },
+                "heading": 0.0006542730998290576,
+                "tilt": 58.67162502005223
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Atidim-2024",
+        "titleBrowserTab": "פרויקט מסוף עתידים",
+        "titleBrowserTabEng": "Atidim",
+        "mapTitle": "אמי מתום – פרויקט מסוף עתידים",
+        "mapTitleEng": "Arad",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "ofek",
+          "userPassword": "ofek2022!@",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Arad_Patio": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ערד- מודל תלת מימד",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Arad_Patio_Navis_orit",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "8d0620caf6804c35bd58528f71a8d86e",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 341.467413854049,
+              "scale": 2633.9023524847357,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3919243.1090910668,
+                "y": 3664946.1940321294,
+                "z": 1498.5870941653848
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3919243.1090910668,
+                  "y": 3664946.1940321294,
+                  "z": 1498.5870941653848
+                },
+                "heading": 23.72649503514243,
+                "tilt": 58.67467495803824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-AradPAtio-2022",
+        "titleBrowserTab": "ערד",
+        "titleBrowserTabEng": "Arad",
+        "mapTitle": "ערד פטיו- מודל תלת מימד",
+        "mapTitleEng": "Arad",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "ofek",
+          "userPassword": "ofek2022!@",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Arad_Public": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ערד - מודל תלת מימד ",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "8d0620caf6804c35bd58528f71a8d86e",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 341.467413854049,
+              "scale": 2633.9023524847357,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3919243.1090910668,
+                "y": 3664946.1940321294,
+                "z": 1498.5870941653848
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3919243.1090910668,
+                  "y": 3664946.1940321294,
+                  "z": 1498.5870941653848
+                },
+                "heading": 23.72649503514243,
+                "tilt": 58.67467495803824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Arad-2024",
+        "titleBrowserTab": "עיריית ערד",
+        "titleBrowserTabEng": "Arad",
+        "mapTitle": "ערד- מודל תלת מימד",
+        "mapTitleEng": "Arad",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Arara_Ofek": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ערערה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=arara",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "25a5f4d1ee3243b5aea2d75675f3dc40",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.6183118791314541,
+              "scale": 2370.805925982182,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3898361.8209784604,
+                "y": 3653060.8286018292,
+                "z": 442.49086835980415
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3898427.5481426385,
+                  "y": 3651501.0451765805,
+                  "z": 1245.2767205573618
+                },
+                "heading": 357.5872135502294,
+                "tilt": 58.99750267178356
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Arara-2023",
+        "titleBrowserTab": "ערערה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Arara",
+        "mapTitle": "ערערה- מודל תלת מימד",
+        "mapTitleEng": "Arara",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Ashkelon": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אשקלון מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=ashkelon",
+        "searchSource2IsAdded": true,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "d01db3d81e3b4d09b0aeb2b645e74025",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 341.467413854049,
+              "scale": 2633.9023524847357,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3847910.975140565,
+                "y": 3719036.9273936287,
+                "z": 988.4818877475336
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3847910.975140565,
+                  "y": 3719036.9273936287,
+                  "z": 988.4818877475336
+                },
+                "heading": 23.72649503514243,
+                "tilt": 58.67467495803824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Ashkelon-2022",
+        "titleBrowserTab": "אשקלון | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ashkelon",
+        "mapTitle": "אשקלון- מודל תלת מימד",
+        "mapTitleEng": "Ashkelon",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Atlas_New": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ערערה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=holon",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "ee641847702f4be485018b458d0d2d97",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 5.649883315762111,
+              "scale": 2292.407542609707,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3878589.277417895,
+                "y": 3779069.032172302,
+                "z": 42.265114332549274
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3878600.384405182,
+                  "y": 3778956.7614498963,
+                  "z": 931.541691458784
+                },
+                "heading": 354.3501166842379,
+                "tilt": 6.132812471348242
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Ashkelon-2022",
+        "titleBrowserTab": " אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "פורטל אופק",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "jeru",
+          "userPassword": "jerusalem",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Jerusalem_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "Weizmann",
+          "userPassword": "Weizmann_2022",
+          "publicationHost": "https://gis.ofek-air.com/publicatio",
+          "publicationName": "Weizmann_Institute_widget"
+        }
+      }
+    },
+    "Beer_Sheva_Ramot": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "באר שבע - שכונת רמות",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "f3b84ca2015e49c7bedea596c8f08ea8",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3875369.2263830006,
+                "y": 3667214.945278405,
+                "z": 504.4952022237703
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3875369.2263830006,
+                  "y": 3667214.945278405,
+                  "z": 504.4952022237703
+                },
+                "heading": 2.06429402410154,
+                "tilt": 58.671755217936834
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek_Beer_Sheva_Ramot_2022",
+        "titleBrowserTab": "באר שבע - שכונת רמות ",
+        "titleBrowserTabEng": "Beer Sheva Ramot",
+        "mapTitle": "באר שבע - שכונת רמות",
+        "mapTitleEng": "Beer Sheva Ramot",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "BS_RAMOT",
+          "userPassword": "BS_RAMOT2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Beer_Sheva_Ramot_Widget"
+        }
+      }
+    },
+    "Bridge_444": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גשר 444",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "8668a9712d6047efa7fca42fab098375",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99997843482015,
+              "scale": 4226.531275480496,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3847910.975140565,
+                "y": 3719036.9273936287,
+                "z": 988.4818877475336
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3847910.975140565,
+                  "y": 3719036.9273936287,
+                  "z": 988.4818877475336
+                },
+                "heading": 23.72649503514243,
+                "tilt": 58.67467495803824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Bridge444-2023",
+        "titleBrowserTab": "גשר 444-מודל תלת מימד",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "גשר 444-מודל תלת מימד",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "doit": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "DOIT",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "5d16ef33419f414a806b7d4477061dce",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 5.649883315762111,
+              "scale": 2292.407542609707,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3901459.152,
+                "y": 3818316.338,
+                "z": 6142.265114332549274
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3901459.152,
+                  "y": 3818316.338,
+                  "z": 6142.265114332549274
+                },
+                "heading": 354.3501166842379,
+                "tilt": 6.132812471348242
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-DOIT-2023",
+        "titleBrowserTab": "פרויקט מסוף עתידים",
+        "titleBrowserTabEng": "Doit",
+        "mapTitle": "Doit",
+        "mapTitleEng": "Doit",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Electricity_Live_System_Demo": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אופק צילומי אוויר",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=iecnetivot",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "f050428fae544d89b65204cadf6c1895",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 320.59178935873814,
+              "scale": 997.5536698155186,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3850264.938531315,
+                "y": 3687211.144928549,
+                "z": 643.6857922906056
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3850264.938531315,
+                  "y": 3687211.144928549,
+                  "z": 643.6857922906056
+                },
+                "heading": 23.55020158469127,
+                "tilt": 61.37297188177818
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-marketing-2023",
+        "titleBrowserTab": "Electricity Live System Demo",
+        "titleBrowserTabEng": "Electricity Demo",
+        "mapTitle": "Electricity Live System Demo",
+        "mapTitleEng": "Arad",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "iec",
+          "userPassword": "iec2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "IEC_Netivot_Widget_Obl_45"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "iec",
+          "userPassword": "iec2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "IEC_Netivot_Widget"
+        }
+      }
+    },
+    "Gadish": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גדיש",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "dc1b2f114d664adeb9420d25a616f1ba",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 355.25688440452285,
+              "scale": 5049.381393833355,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3884840.047618682,
+                "y": 3753583.3626864594,
+                "z": 3950.0291145676747
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3884840.047618682,
+                  "y": 3753583.3626864594,
+                  "z": 3950.0291145676747
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "ofek_Gadish_2023",
+        "titleBrowserTab": "ערד",
+        "titleBrowserTabEng": "GADISH",
+        "mapTitle": "מודל תלת מימד - גדיש",
+        "mapTitleEng": "GADISH",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "ofek_sh",
+          "userPassword": "ofek2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Gsdish_Drone_Terminal6_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "ofek_sh",
+          "userPassword": "ofek2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Gsdish_Drone_Terminal6_Widget"
+        }
+      }
+    },
+    "Galil_Mizrahi": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גליל מזרחי מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=galilmizrahi",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "404be574396547cb8e303ebb9fabf3c9",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99997843482015,
+              "scale": 4226.531275480496,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3952140.31842036,
+                "y": 3855920.9686641493,
+                "z": 398.3631074009463
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3952140.31842036,
+                  "y": 3855920.9686641493,
+                  "z": 398.3631074009463
+                },
+                "heading": 357.9410357342467,
+                "tilt": 58.1445445308378
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-GalilMizrahi-2022",
+        "titleBrowserTab": "גליל מזרחי | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "מודל תלת מימד -גליל מזרחי",
+        "mapTitleEng": "Afula",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "גושים",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "GaneiTikva": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גני תקווה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Ganei_Tikva",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "762ec80b17244ee5a68dfd19b51dfe4f",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3882518.301610831,
+                "y": 3771247.12868274,
+                "z": 29.665290912613273
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3882518.301610831,
+                  "y": 3771247.12868274,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-GaneiTikva-2020",
+        "titleBrowserTab": "גני תקווה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "עיריית גני תקווה- מודל תלת מימדי",
+        "mapTitleEng": "GaneiTikva",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "GaneiTikva",
+          "userPassword": "GaneiTikva_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Ganei_Tikva_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "GanYavne": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גן יבנה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Gan_Yavne",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "2bd3cd06fa6147179d9ead307ec30940",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3863775.9060878777,
+                "y": 3735637.1407297384,
+                "z": 29.665290912613273
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3863775.9060878777,
+                  "y": 3735637.1407297384,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-GanYavne-2020",
+        "titleBrowserTab": "גן יבנה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "עיריית גן יבנה- מודל תלת מימדי",
+        "mapTitleEng": "GAMYAVNE",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": true,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "ganyavne",
+          "userPassword": "ganyavne_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Gan_Yavne_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "GanYavne_Moni": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גן יבנה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Gan_Yavne",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "8ff96a7f39d74dcdb926dca9b1a61347",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3863775.9060878777,
+                "y": 3735637.1407297384,
+                "z": 29.665290912613273
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3863775.9060878777,
+                  "y": 3735637.1407297384,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-GanYavne_Moni-2020",
+        "titleBrowserTab": "גן יבנה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "עיריית גן יבנה- מודל תלת מימדי",
+        "mapTitleEng": "GAMYAVNE",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": true,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "ganyavne",
+          "userPassword": "ganyavne_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Gan_Yavne_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Givat_Shmuel": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "גבעת שמואל מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Givat_Shmuel",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "b46713085bdb460a9ed3ae66386db42d",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3879441.2582465527,
+                "y": 3773353.6106366003,
+                "z": 1122.0498246047646
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3879441.2582465527,
+                  "y": 3773353.6106366003,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Givat-Shmuel-2020",
+        "titleBrowserTab": "גבעת שמואל | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "עיריית גבעת שמואל- מודל תלת מימדי",
+        "mapTitleEng": "GIVATSHMUEL",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": true,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "givats",
+          "userPassword": "givats",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Givat_Shmuel_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Harnuf": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "הר נוף – פרויקט מסוף עתידים",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "ea78412505604234a569d70cefb1c41e",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.0008306252310035234,
+              "scale": 33128.1587087781,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3917455.5965080447,
+                "y": 3733508.276158633,
+                "z": 2554.957994300872
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3917455.5965080447,
+                  "y": 3733508.276158633,
+                  "z": 2554.957994300872
+                },
+                "heading": 327.54802438983205,
+                "tilt": 38.18164295835085
+              }
+            }
+          }
+        },
+        "monitorAppName": "ofek-HarNuf-2022",
+        "titleBrowserTab": "פרויקט הר נוף ",
+        "titleBrowserTabEng": "HarNuf",
+        "mapTitle": "פרויקט הר נוף",
+        "mapTitleEng": "Arad",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Holon": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "חולון מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=Holon",
+        "searchSource2IsAdded": true,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "f78ebbd8296c432ba09435893ea6d810",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 34.59969581390379,
+              "scale": 800.7313888197929,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3870208.6017735014,
+                "y": 3763399.987700691,
+                "z": 50.407207099720836
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3870208.6017735014,
+                  "y": 3763399.987700691,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Holon-2020",
+        "titleBrowserTab": "חולון| אופק צילומי אויר",
+        "titleBrowserTabEng": "Holon",
+        "mapTitle": "חולון- מודל תלת מימד",
+        "mapTitleEng": "Holon",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Jrs_Moni": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ירולשים מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Jerusalem",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "20fd879130fa44e9b74cd9c3a8acf658",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3914794.4798733443,
+                "y": 3730291.167655433,
+                "z": 10.8788026478142
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3914794.4798733443,
+                  "y": 3730291.167655433,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek_Jeruslem_2021",
+        "titleBrowserTab": "ירשושלים| אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "עיריית ירשולים- מודל תלת מימדי",
+        "mapTitleEng": "JERUSALEM",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "jeru",
+          "userPassword": "jerusalem",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Jerusalem_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Jrs_Public": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "ירולשלים מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Jerusalem",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "8c3627875c4f4393a06fbfd776604240",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3914794.4798733443,
+                "y": 3730291.167655433,
+                "z": 10.8788026478142
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3914794.4798733443,
+                  "y": 3730291.167655433,
+                  "z": 1122.0498246047646
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "ofek-jeruslem-2020-For-Public",
+        "titleBrowserTab": "ירשושלים| אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "עיריית ירשולים- מודל תלת מימדי",
+        "mapTitleEng": "JERUSALEM",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": true,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "jeru",
+          "userPassword": "jerusalem",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Jerusalem_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Karni": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "קרני",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "05c90deb0bbe4dbf9e91f45bdb3d3692",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3913141.151292069,
+                "y": 3699352.765117338,
+                "z": 861183.1732026832
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3913141.151292069,
+                  "y": 3699352.765117338,
+                  "z": 861183.1732026832
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek_Karni_2023",
+        "titleBrowserTab": "פרויקט מסוף עתידים ",
+        "titleBrowserTabEng": "KARNI",
+        "mapTitle": "ש.קרני הנדסה",
+        "mapTitleEng": "KARNI",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Kuseife": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "כסייפה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=kuseife",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "73ef42a1f8284465a409bbafe40d3e57",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.6183118791314541,
+              "scale": 2370.805925982182,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3905826.1659070374,
+                "y": 3664464.6171636498,
+                "z": 471.1387213245034
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3905870.994187815,
+                  "y": 3659609.4012318263,
+                  "z": 2981.832633594051
+                },
+                "heading": 359.4711066038307,
+                "tilt": 58.827353579802406
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Kuseife-2024",
+        "titleBrowserTab": "כסיפה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Kuseife",
+        "mapTitle": "כסיפה- מודל תלת מימד",
+        "mapTitleEng": "Kuseife",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Mate_Asher": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "מטה אשר מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=asher",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "59983c1fc82941fd95f48d18e21393c3",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0,
+              "scale": 508.5163084446994,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3906952.6285100267,
+                "y": 3879359.1562056793,
+                "z": 789.5938869388774
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3906952.6285100267,
+                  "y": 3879359.1562056793,
+                  "z": 1047.9073725417256
+                },
+                "heading": 0,
+                "tilt": 16.040664057795773
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-MateAsher-2022",
+        "titleBrowserTab": "מטה אשר | אופק צילומי אויר",
+        "titleBrowserTabEng": "MateAsher",
+        "mapTitle": "מטה אשר- מודל תלת מימד",
+        "mapTitleEng": "MateAsher",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Michnaf": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "מכנף מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "22b883e3e8904384a65e2dc315b7ff33",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3880461.6234174957,
+                "y": 3767479.827134537,
+                "z": 10.8788026478142
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3880461.6234174957,
+                  "y": 3767479.827134537,
+                  "z": 497.93210458755493
+                },
+                "heading": 2.05894577172686,
+                "tilt": 54.242798860366676
+              }
+            }
+          }
+        },
+        "monitorAppName": "ofek-Marketing",
+        "titleBrowserTab": "מכנף | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "מכנף- מודל תלת מימד",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Ministry_of_Justice": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "משרד המשפטים מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "398debdfff4c408f959b77fac1589c68",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99997843482015,
+              "scale": 4226.531275480496,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3847910.975140565,
+                "y": 3719036.9273936287,
+                "z": 988.4818877475336
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3919631.50637361,
+                  "y": 3736637.9286104045,
+                  "z": 10383.984338133596
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-MinistryJustice-2023",
+        "titleBrowserTab": "משרד המשפטים | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "משרד המשפטים",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Misgav": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "משגב מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=misgav",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "4258370741a749ffa119f400a2cb6565",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.0008306252310035234,
+              "scale": 33128.1587087781,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3935802.8052106956,
+                "y": 3880027.7344079497,
+                "z": 8626.880703585222
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3935802.8052106956,
+                  "y": 3880027.7344079497,
+                  "z": 8626.880703585222
+                },
+                "heading": 0.019675736349693922,
+                "tilt": 17.510219962651977
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Misgav-2022",
+        "titleBrowserTab": "משגב | אופק צילומי אויר",
+        "titleBrowserTabEng": "MISGAV",
+        "mapTitle": "משגב- מודל תלת מימד",
+        "mapTitleEng": "MISGAV",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "גושים",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Naharia": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "נהריה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=naharia",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "c9a1c36d9acd4b78802528b84713cb74",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 351.5093425118593,
+              "scale": 2960.40414174035,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3906505.8477106886,
+                "y": 3894509.0105350935,
+                "z": 842.1271938132122
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3906505.8477106886,
+                  "y": 3894509.0105350935,
+                  "z": 842.1271938132122
+                },
+                "heading": 8.490657488140707,
+                "tilt": 51.51101092011255
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Naharia-2022",
+        "titleBrowserTab": "נהריה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Naharia",
+        "mapTitle": "נהריה- מודל תלת מימד",
+        "mapTitleEng": "Naharia",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Ofek_Marketing": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אופק צילומי אויר - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "f40c097d86d44d8491639eb2eb00fa96",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.0002623128348773207,
+              "scale": 6427.022628987015,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3873032.94066927,
+                "y": 3765196.7866705027,
+                "z": 44.505815393291414
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3873032.952597567,
+                  "y": 3762591.625799878,
+                  "z": 1577.8329134164378
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "ofek-Marketing-2022",
+        "titleBrowserTab": " אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "אופק צילומי אויר",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Photovoltaic": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אופק צילומי אויר - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "559a8a30626448e8a45d5fba79c37c74",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 118.96110691307408,
+              "scale": 1079.237392583895,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3893409.357749054,
+                "y": 3865206.7507711696,
+                "z": -0.001081288792192936
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3893409.357749054,
+                  "y": 3854521.7466305597,
+                  "z": 8505.639297953807
+                },
+                "heading": 0,
+                "tilt": 46.55896822186839
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Photovoltaic-2024",
+        "titleBrowserTab": " אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "אופק צילומי אויר",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Portal_Train": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": " מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Train_Portals",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "e88a7f89b5b244a0a823e02ba5bd45eb",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3896536.2061261074,
+                "y": 3743541.197861133,
+                "z": 3605.909713984467
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3896536.2061261074,
+                  "y": 3743541.197861133,
+                  "z": 3605.909713984467
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Portal-Train-2023",
+        "titleBrowserTab": "כסיפה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "קו תל-אביב ירושלים",
+        "mapTitleEng": "Kuseife",
+        "mapSubtitle": "Ofek Aerial Photography",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "T_portals",
+          "userPassword": "T_portals2023!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Train_Portals_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Ramat_Hovav": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": " מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Z_DEMO_ADAMA_15.06.21",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "425241e3d96f4b3f8baa0b8643385c6e",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 355.25688440452285,
+              "scale": 5049.381393833355,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3872184.4262940325,
+                "y": 3649585.071378035,
+                "z": 4435.852547804825
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3872184.4262940325,
+                  "y": 3649585.071378035,
+                  "z": 4435.852547804825
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-RamatHovav-2024",
+        "titleBrowserTab": "רמת חובב | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "רמת חובב",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "Ofek Aerial Photography",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "ofek_sh",
+          "userPassword": "ofek2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Z_DEMO_ADAMA_15.06.21"
+        }
+      }
+    },
+    "Road_4": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": " כביש 4 - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "bd742193a3fd4a22a323a78d1182114e",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.0008306252310035234,
+              "scale": 33128.1587087781,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3935802.8052106956,
+                "y": 3880027.7344079497,
+                "z": 8626.880703585222
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3892091.1735098027,
+                  "y": 3861131.016933365,
+                  "z": 3995.517110398039
+                },
+                "heading": 0.019675736349693922,
+                "tilt": 17.510219962651977
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Road4-2022",
+        "titleBrowserTab": "כביש 4 | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "כביש 4",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "Ofek Aerial Photography",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": false,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "road4",
+          "userPassword": "road4_2022!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Road_4_Widget"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Shlomi": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "שלומי מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=shlomi",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "94c78d627bc74d0da3f7b38146ccde8a",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 4,
+              "scale": 5364.667310405756,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3912594.263867102,
+                "y": 3902147.7703893613,
+                "z": 1178.228133680299
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3912594.263867102,
+                  "y": 3902147.7703893613,
+                  "z": 1178.228133680299
+                },
+                "heading": 356.50774033304305,
+                "tilt": 63.742162263674466
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Shlomi-2023",
+        "titleBrowserTab": "שלומי | אופק צילומי אויר",
+        "titleBrowserTabEng": "Shlomi",
+        "mapTitle": "שלומי- מודל תלת מימד",
+        "mapTitleEng": "Shlomi",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "TAU": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "אוניברסיטת תל אביב - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "fd4c90a94b314ac6972d00c7c80ec66f",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3874335.3257932616,
+                "y": 3777212.97673752,
+                "z": 715.2537126736715
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3874335.3257932616,
+                  "y": 3777212.97673752,
+                  "z": 715.2537126736715
+                },
+                "heading": 3.4930003678095574,
+                "tilt": 49.06587939941861
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-TAU-2023",
+        "titleBrowserTab": "אוניברסיטת תל אביב | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "אוניברסיטת תל אביב",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "שמות מבנים",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Technion": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "טכניון - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "67e586af6608459fbb18d13f0f39b162",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 12.694672491774838,
+              "scale": 229.9866816215114,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 35.02656654740396,
+                "y": 32.77512727116561,
+                "z": 179.95599193684757
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 35.02679225331531,
+                  "y": 32.774284812873745,
+                  "z": 247.39552895911038
+                },
+                "heading": 347.30532750822516,
+                "tilt": 54.949636546015824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Technion-2021",
+        "titleBrowserTab": "טכניון | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "טכניון ",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "technion",
+          "userPassword": "technion",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Technion_Widget"
+        }
+      }
+    },
+    "Tveria": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "טבריה מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=Tveria  ",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "475fd2f5220441afb6b8d2f13bd15724",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 3169.341845245157,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3954014.8017403856,
+                "y": 3864684.5472535198,
+                "z": 696.9823726546019
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3954014.8017403856,
+                  "y": 3864684.5472535198,
+                  "z": 696.9823726546019
+                },
+                "heading": 0.3575527833123362,
+                "tilt": 61.33216617509559
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Tveria-2022",
+        "titleBrowserTab": "טבריה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Tveria",
+        "mapTitle": "טבריה- מודל תלת מימד",
+        "mapTitleEng": "Tveria",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "גושים",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Vtour": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "מגשימים - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "a9295d53b1a5419eaeaad4b2585dccea",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.005573739938995459,
+              "scale": 44405.55838457249,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3981634.9092922476,
+                "y": 3870544.8747473033,
+                "z": 360.2225298890844
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3981636.3517631725,
+                  "y": 3855726.174064835,
+                  "z": 10525.819089778699
+                },
+                "heading": 359.994426260061,
+                "tilt": 50.7630810058417
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek_Magshimim_2024",
+        "titleBrowserTab": " אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "מתקן פוטו וולטאי רמת מגשימים",
+        "mapTitleEng": "Ofek Aerial Photography",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "גושים",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "Weizmann_Institute": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "מכון וויצמן מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Weizmann_Institute",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "c7726e586f4143e08242a0dcf006d82a",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 355.25688440452285,
+              "scale": 5049.381393833355,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3875407.327082808,
+                "y": 3751197.583195508,
+                "z": 319.364923004061
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3875407.327082808,
+                  "y": 3751197.583195508,
+                  "z": 319.364923004061
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Weizmann_Institute-2021",
+        "titleBrowserTab": "ווצמן | אופק צילומי אויר",
+        "titleBrowserTabEng": "Weizmann Institute",
+        "mapTitle": "מכון וויצמן- מודל תלת מימד",
+        "mapTitleEng": "Weizmann Institute",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "Weizmann",
+          "userPassword": "Weizmann_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Weizmann_Institute_Point_Location"
+        }
+      }
+    },
+    "yonaltd": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "יונה - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Natbag",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "82c59f557424413ea2934db97fe9fe32",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 341.467413854049,
+              "scale": 2633.9023524847357,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3881575.8352467744,
+                "y": 3761631.4753425843,
+                "z": 2170.7655867058784
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3881575.8352467744,
+                  "y": 3761631.4753425843,
+                  "z": 2170.7655867058784
+                },
+                "heading": 23.72649503514243,
+                "tilt": 58.67467495803824
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Yona-2024",
+        "titleBrowserTab": "יונה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Weizmann Institute",
+        "mapTitle": "מכון וויצמן- מודל תלת מימד",
+        "mapTitleEng": "Weizmann Institute",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "leo",
+          "userPassword": "borbeeR5!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Natbag"
+        }
+      }
+    },
+    "Zfat": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "צפת מודל תלת מימד - שיתוף מיקום",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=zfat",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "f489925d429a4544ac803443e347b23d",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 355.25688440452285,
+              "scale": 5049.381393833355,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3954283.0541122165,
+                "y": 3887486.462843923,
+                "z": 857.9125998923555
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3954283.0541122165,
+                  "y": 3887486.462843923,
+                  "z": 857.9125998923555
+                },
+                "heading": 1.4203743650361171,
+                "tilt": 68.45721487313975
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Zfat-2023",
+        "titleBrowserTab": "צפת | אופק צילומי אויר",
+        "titleBrowserTabEng": "Ofek Aerial Photography",
+        "mapTitle": "מודל תלת מימד -צפת",
+        "mapTitleEng": "Zfat",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
+        "lakeWaterHeight": {
+          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": {
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "",
+          "userName": "",
+          "userPassword": "",
+          "publicationHost": "",
+          "publicationName": ""
+        }
+      }
+    },
+    "ERROR": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "יונה - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Natbag",
+        "searchSource2IsAdded": false,
+        "searchSource2": {
+          "url": "https://oapgis.ofekonline.com/arcgis/rest/services/Hosted/Ashkelon_Layers_WFL1/FeatureServer/4",
+          "layerTitle2": "כתובות",
+          "name": "אשקלון - מספר בית ברחוב {str_name}",
+          "name2": "חיפוש בעיר הנוכחית בלבד (כתובת, ללא ציון עיר)",
+          "searchFields": [
+            "str_name",
+            "house_num"
+          ],
+          "suggestionTemplate": "{str_name} {house_num}",
+          "displayField": "house_num",
+          "exactMatch": false,
+          "outFields": [
+            "*"
+          ],
+          "placeholder": "רחוב [ומספר בית], ללא ציון עיר",
+          "zoomScale": 500,
+          "maxSuggestions": 500,
+          "maxResults": 500,
+          "type": "query"
+        }
+      },
+      "itemsInMainCfg": {
+        "map.itemId": "82c59f557424413ea2934db97fe9fe32",
+        "map.mapOptions": null,
+        "monitorAppName": "_Ofek-Naharia-2022",
+        "titleBrowserTab": "נהריה | אופק צילומי אויר",
+        "titleBrowserTabEng": "Naharia",
+        "mapTitle": "נהריה",
+        "mapTitleEng": "Naharia",
+        "mapSubtitle": "אופק צילומי אויר",
+        "mapSubtitleEng": "Ofek Aerial Photography",
+        "isVisibleAtInitLaunchpadPanel": true,
+        "isOfekManager": false,
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": [
+          {
+            "title": "GaneiTikva_Cesium",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/GaneiTikva/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Utrecht Integrated Mesh 3D Tiles",
+            "url": "https://3d.ofek-air.com/3D/Bursa_3dtiles_LOD_acroosTiles/Scene/Bursa_3dtiles_LOD_acroosTiles.json",
+            "offset": 200
+          },
+          {
+            "title": "Weizmann Institute 2022",
+            "url": "https://3d.ofek-air.com/3D/Cesium/Models/Weizman/tileset.json",
+            "offset": 10
+          }
+        ],
+        "lakeWaterHeight": {
+          "comment": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
+          "אשקלון": 26.4
+        },
+        "orbit45": null,
+        "orbit360": {
+          "isAutoOpen": false,
+          "layerTitle": "Weizmann_Institute_Point_Location",
+          "userName": "Weizmann",
+          "userPassword": "Weizmann_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Weizmann_Institute_widget"
+        }
+      }
+    }
+  }
+}
