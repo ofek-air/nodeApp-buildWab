@@ -4,10 +4,8 @@
   "___13": "-----------------------------------------------------------------------------------------",
   "newVersionApp2": "C:/inetpub/wwwroot/CustomSceneNew/new",
   "allAppsFolder2": "C:/inetpub/wwwroot/CustomScene",
-  "newVersionApp": "D:/Sync/wk/ofek/_dev/apps/wab/2.30/_wab-2.30-2030-d/server/apps/new",
-  "allAppsFolder": "D:/Sync/wk/ofek/_dev/apps/wab/2.30/_wab-2.30-2030-d/server/apps",
-  "newVersionApp-leo": "D:/ofek-tools/CustomScene/new",
-  "allAppsFolder-leo": "D:/ofek-tools/CustomScene",
+  "newVersionApp": "D:/Sync/ml/_dev/apps/wab/2.30/_wab-2.30-2030-d/server/apps/NewApp",
+  "allAppsFolder": "D:/Sync/ml/_dev/apps/wab/2.30/_wab-2.30-2030-d/server/apps",
   "___21": "=========================================================================================",
   "___22": "*** Defaults: true, true, true. If by zip, program will do zip by itself.",
   "___23": "-----------------------------------------------------------------------------------------",
@@ -17,7 +15,7 @@
   "___31": "=========================================================================================",
   "___32": "*** 2 next constants - DON'T change",
   "___33": "-----------------------------------------------------------------------------------------",
-  "CONFIG_VERSION": "v24_08_28",
+  "CONFIG_VERSION": "v25_04_03",
   "appId": "oGgwNFOg3rb76tC9",
   "___41": "=========================================================================================",
   "___42": "*** If app exists in 'allAppsFolder', overwrite, even if it's the 'newVersionApp' itself.",
@@ -25,14 +23,19 @@
   "___44": "*** mapOptions - If you want initial scene view as in portal - set it to null",
   "___45": "-----------------------------------------------------------------------------------------",
   "flags": {
-    "Ashkelon": 1
+    "Ashkelon": 1,
+    "Colmobil": 1
+  },
+  "flags-done-ok": {
+    "Ashkelon": 1,
+    "Colmobil": 1
+  },
+  "flags-not-to-do-yet": {
+    "Teralight_Solar_Tech": 0
   },
   "flags-energy": {
-    "EDF_3D": 0,
-    "Enerpoint": 0,
-    "EnerpointN": 0,
-    "EnerpointOld": 0,
-    "FAEnergyTech": 0,
+    "Colmobil": 0,
+    "FAEnergyTech_": 0,
     "Teralight_Solar_Tech": 0,
     "Volta_Solar": 0
   },
@@ -50,8 +53,10 @@
     "Atlas_New": 1,
     "Beer_Sheva_Ramot": 1,
     "Beer_Sheva_Train": 1,
+    "BLK": 1,
     "Bridge_444": 1,
     "Bsor": 1,
+    "DTM_DSM_Swipe": 1,
     "Doit": 1,
     "Eilat": 1,
     "Electricity_Live_System_Demo": 1,
@@ -98,9 +103,11 @@
     "TAU": 1,
     "Technion": 1,
     "Tel_Sheva": 1,
+    "TelShevaDemo": 1,
     "Tveria": 1,
     "Vtour": 1,
     "Weizmann_Institute": 1,
+    "Weizmann_Institute2": 1,
     "Yavne": 1,
     "yonaltd": 1,
     "Zfat": 1
@@ -153,7 +160,6 @@
         "titleBrowserTabEng": "Afula | Ofek Aerial Photography",
         "mapTitle": "עיריית עפולה",
         "mapTitleEng": "Afula",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "גושים",
         "apiKeyHandler": null,
@@ -178,7 +184,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -230,7 +235,6 @@
         "titleBrowserTabEng": "Atidim | Ofek Aerial Photography",
         "mapTitle": "אמי מתום – פרויקט מסוף עתידים",
         "mapTitleEng": "Arad",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -255,7 +259,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -302,12 +305,10 @@
             }
           }
         },
+        "logo": "images/app-logo.png",
+        "appName": "עיריית ערד - מודל תלת ממד",
+        "appNameEng": "Arad",
         "monitorAppName": "Ofek-Arad-2024",
-        "titleBrowserTab": "עיריית ערד | אופק צילומי אויר",
-        "titleBrowserTabEng": "Arad Muni | Ofek Aerial Photography",
-        "mapTitle": "עיריית ערד - מודל תלת ממד",
-        "mapTitleEng": "Arad Muni",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "יעודי קרקע",
         "apiKeyHandler": null,
@@ -317,22 +318,48 @@
           "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
           "SearchGovmap": false,
           "Govmap": false,
-          "Orbit": false,
           "Slides": false,
+          "Orbit": false,
           "Orbit3D": false,
+          "ImportCad": false,
           "OrbitOblique": true,
-          "Edit3dFlightProjects": true,
+          "Manage": false,
+          "groups": false,
+          "Colmobil": true,
+          "Colmobil1": true,
+          "Enerpoint": true,
+          "FAEnergyTech": true,
+          "VoltaSolar": true,
           "Edit3dEnerpoint": true,
           "Edit3dTeralight": true,
           "Edit3dVoltasolar": true,
           "Edit3dFAEnergyTech": true,
-          "Manage": true,
-          "Orbit3dPoly": true,
-          "ConvertDWG": true,
-          "GpCad2Shp": true
+          "Edit3dFlightProjects": true,
+          "Edit3d_2": true,
+          "EBookmark_2": true,
+          "Measurement3D_2": true
         },
-        "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
+        "photorealisticSources": {
+          "integratedMesh": {
+            "תלת_ממד 2024": [
+              "מידול_תלת_ממד 20.01.24"
+            ]
+          },
+          "integratedMesh3DTiles": {
+            "תלת_ממד 2025": [
+              {
+                "title": "Arad Small 2025",
+                "url": "https://gis.ofek-air.com/DATA/250110_Arad/SMALL/3dTiles/tileset.json",
+                "offset": 40
+              },
+              {
+                "title": "Arad 2025",
+                "url": "https://gis.ofek-air.com/DATA/250110_Arad/BIG/3dTiles/tileset.json",
+                "offset": 40
+              }
+            ]
+          }
+        },
         "orbit45": null,
         "orbit360": {
           "userName": "ofek",
@@ -389,7 +416,6 @@
         "titleBrowserTabEng": "Arad | Ofek Aerial Photography",
         "mapTitle": "ערד פטיו - מודל תלת ממד",
         "mapTitleEng": "Arad",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -399,22 +425,48 @@
           "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
           "SearchGovmap": false,
           "Govmap": false,
-          "Orbit": false,
           "Slides": false,
+          "Orbit": false,
           "Orbit3D": false,
+          "ImportCad": false,
           "OrbitOblique": true,
-          "Edit3dFlightProjects": true,
+          "Manage": false,
+          "groups": false,
+          "Colmobil": true,
+          "Colmobil1": true,
+          "Enerpoint": true,
+          "FAEnergyTech": true,
+          "VoltaSolar": true,
           "Edit3dEnerpoint": true,
           "Edit3dTeralight": true,
           "Edit3dVoltasolar": true,
           "Edit3dFAEnergyTech": true,
-          "Manage": true,
-          "Orbit3dPoly": true,
-          "ConvertDWG": true,
-          "GpCad2Shp": true
+          "Edit3dFlightProjects": true,
+          "Edit3d_2": true,
+          "EBookmark_2": true,
+          "Measurement3D_2": true
         },
-        "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
+        "photorealisticSources": {
+          "integratedMesh": {
+            "תלת_ממד 2024": [
+              "מידול_תלת_ממד 20.01.24"
+            ]
+          },
+          "integratedMesh3DTiles": {
+            "תלת_ממד 2025": [
+              {
+                "title": "Arad Small 2025",
+                "url": "https://gis.ofek-air.com/DATA/250110_Arad/SMALL/3dTiles/tileset.json",
+                "offset": 40
+              },
+              {
+                "title": "Arad 2025",
+                "url": "https://gis.ofek-air.com/DATA/250110_Arad/BIG/3dTiles/tileset.json",
+                "offset": 40
+              }
+            ]
+          }
+        },
         "orbit45": null,
         "orbit360": {
           "userName": "ofek",
@@ -471,7 +523,6 @@
         "titleBrowserTabEng": "Arad | Ofek Aerial Photography",
         "mapTitle": "ערד - מודל תלת ממד",
         "mapTitleEng": "Arad",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -496,7 +547,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "userName": "ofek",
@@ -553,7 +603,6 @@
         "titleBrowserTabEng": "Arara | Ofek Aerial Photography",
         "mapTitle": "ערערה - מודל תלת ממד",
         "mapTitleEng": "Arara",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -578,7 +627,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -630,7 +678,6 @@
         "titleBrowserTabEng": "Arara | Ofek Aerial Photography",
         "mapTitle": "ערערה - מודל תלת ממד",
         "mapTitleEng": "Arara",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -655,7 +702,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -692,19 +738,53 @@
         "map.portalUrl": "https://oapgis.ofekonline.com/portal",
         "appId": "oGgwNFOg3rb76tC9",
         "map.itemId": "d01db3d81e3b4d09b0aeb2b645e74025",
+        "logo": "images/app-logo.png",
+        "appName": "אשקלון",
+        "mapTitle": "מודל תלת ממד",
+        "appNameEng": "Ashkelon",
+        "monitorAppName": "Ofek-Ashkelon-2022",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "apiKeyHandler": null,
+        "mapLayers": null,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its EXACT name",
+          "--note--2": "hide groups only for energy companies",
+          "Govmap": false,
+          "Slides": false,
+          "Orbit": false,
+          "groups": false,
+          "Colmobil": true,
+          "Enerpoint": true,
+          "FAEnergyTech": true,
+          "VoltaSolar": true,
+          "Edit3dTeralight": true,
+          "FlightProjects": true
+        },
+        "cfg3DTilesByYears": {
+          "2024": [
+            {
+              "title": "3dTiles-Ashkelon-2024.10.01",
+              "url": "https://gis.ofek-air.com/Data/230970-Ashqelon_3dml/2/tileset.json",
+              "offset": 18.8
+            }
+          ]
+        },
+        "orbit45": null,
+        "orbit360": null,
         "map.mapOptions": {
           "initialState": {
             "viewpoint": {
-              "rotation": 341.467413854049,
-              "scale": 2633.9023524847357,
+              "rotation": 330.83093348648094,
+              "scale": 5687.015625735232,
               "targetGeometry": {
                 "spatialReference": {
                   "latestWkid": 3857,
                   "wkid": 102100
                 },
-                "x": 3847910.975140565,
-                "y": 3719036.9273936287,
-                "z": 988.4818877475336
+                "x": 3847517.9700644976,
+                "y": 3717539.610833006,
+                "z": 37.09901017509401
               },
               "camera": {
                 "position": {
@@ -712,67 +792,16 @@
                     "latestWkid": 3857,
                     "wkid": 102100
                   },
-                  "x": 3847910.975140565,
-                  "y": 3719036.9273936287,
-                  "z": 988.4818877475336
+                  "x": 3846320.348003019,
+                  "y": 3715394.2474465193,
+                  "z": 659.9616188704967
                 },
-                "heading": 23.72649503514243,
-                "tilt": 58.67467495803824
+                "heading": 29.169066513519063,
+                "tilt": 73.40941250283143
               }
             }
           }
-        },
-        "monitorAppName": "Ofek-Ashkelon-2022",
-        "titleBrowserTab": "אשקלון | אופק צילומי אויר",
-        "titleBrowserTabEng": "Ashkelon | Ofek Aerial Photography",
-        "mapTitle": "אשקלון - מודל תלת ממד",
-        "mapTitleEng": "Ashkelon",
-        "isOfekManager": false,
-        "isPublicApp": false,
-        "defaultLayerTitleForFilterAndStatistics": "רחובות",
-        "widgetsToHide": {
-          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
-          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
-          "SearchGovmap": false,
-          "Govmap": false,
-          "Orbit": false,
-          "Slides": false,
-          "Orbit3D": true,
-          "OrbitOblique": true,
-          "Edit3dFlightProjects": true,
-          "Edit3dEnerpoint": true,
-          "Edit3dTeralight": true,
-          "Edit3dVoltasolar": true,
-          "Edit3dFAEnergyTech": true,
-          "Manage": true,
-          "Orbit3dPoly": true,
-          "ConvertDWG": true,
-          "GpCad2Shp": true
-        },
-        "apiKeyHandler": null,
-        "mapLayers": null,
-        "ofekCfgMaps3d": {
-          "integratedMesh": {
-            "תלת-ממד 2023": [
-              "מידול פוטוריאליסטי 2023.09.08"
-            ]
-          },
-          "integratedMesh3DTiles": {
-            "תלת-ממד 2024": [
-              {
-                "title": "3dTiles-Ashkelon-2024.10.01",
-                "url": "https://gis.ofek-air.com/Data/230970-asqelon_3dml/tileset.json",
-                "offset": 18.8
-              }
-            ]
-          }
-        },
-        "lakeWaterHeight": {
-          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
-          "אשקלון": 26.4
-        },
-        "orbit45": null,
-        "orbit360": null
+        }
       }
     },
     "Ashkelon_test": {
@@ -842,7 +871,6 @@
         "titleBrowserTabEng": "Ashkelon | Ofek Aerial Photography",
         "mapTitle": "אשקלון - מודל תלת ממד",
         "mapTitleEng": "Ashkelon",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -867,10 +895,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": {
-          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
-          "אשקלון": 26.4
-        },
         "orbit45": null,
         "orbit360": null
       }
@@ -942,7 +966,6 @@
         "titleBrowserTabEng": "Ashkelon | Ofek Aerial Photography",
         "mapTitle": "אשקלון - מודל תלת ממד",
         "mapTitleEng": "Ashkelon",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -967,10 +990,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": {
-          "--note--": "הגדר שכבה פוליגונלית עם סיומת '-החלפה', למשל כך: אשקלון-החלפה",
-          "אשקלון": 26.4
-        },
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -1028,7 +1047,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "פורטל אופק",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1053,7 +1071,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "jeru",
           "userPassword": "jerusalem",
@@ -1116,7 +1133,6 @@
         "titleBrowserTabEng": "Beer Sheva - Ramot | Ofek Aerial Photography",
         "mapTitle": "באר שבע - שכונת רמות",
         "mapTitleEng": "Beer Sheva Ramot",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -1141,7 +1157,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -1199,7 +1214,6 @@
         "titleBrowserTabEng": "Beer Sheva - Light Train | Ofek Aerial Photography",
         "mapTitle": "באר שבע - רכבת קלה ",
         "mapTitleEng": "Beer Sheva Train",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1224,7 +1238,112 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
+        "orbit45": null,
+        "orbit360": null
+      }
+    },
+    "BLK": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "BLK - אדריכלים",
+        "oblique_app_url": null,
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "portalUrl": "https://oapgis.ofekonline.com/portal",
+        "map.portalUrl": "https://oapgis.ofekonline.com/portal",
+        "appId": "oGgwNFOg3rb76tC9",
+        "map.itemId": "66ab55668cc54daabedb1f9308be5fb2",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3913141.151292069,
+                "y": 3699352.765117338,
+                "z": 861183.1732026832
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3913141.151292069,
+                  "y": 3699352.765117338,
+                  "z": 861183.1732026832
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "BLK",
+        "titleBrowserTab": "BLK| אופק צילומי אוויר",
+        "titleBrowserTabEng": "BLK- Ofek Aerial Photography",
+        "mapTitle": "תשתית מיפוי ארצית |BLK",
+        "mapTitleEng": "BLK - National mapping infrastructure",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "apiKeyHandler": null,
+        "mapLayers": null,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": true,
+          "SearchGovmap": false,
+          "Slides": false,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": [
+          {
+            "title": "Netanya-Part1",
+            "url": "https://oapgis.ofekonline.com/3d_Tiles/Netanya/Part1/P1/Cesium/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Netanya-Part2",
+            "url": "https://oapgis.ofekonline.com/3d_Tiles/Netanya/Part2/P2/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Netanya-Part3_1",
+            "url": "https://oapgis.ofekonline.com/3d_Tiles/Netanya/Part3/P1/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Netanya-Part3_2",
+            "url": "https://oapgis.ofekonline.com/3d_Tiles/Netanya/Part3/P2/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Netanya-Part3_3",
+            "url": "https://oapgis.ofekonline.com/3d_Tiles/Netanya/Part3/P3/tileset.json",
+            "offset": 10
+          },
+          {
+            "title": "Netanya-Part4",
+            "url": "https://oapgis.ofekonline.com/3d_Tiles/Netanya/Part4/P4/tileset.json",
+            "offset": 10
+          }
+        ],
         "orbit45": null,
         "orbit360": null
       }
@@ -1276,7 +1395,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "גשר 444 - מודל תלת ממד",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1301,7 +1419,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -1353,7 +1470,6 @@
         "titleBrowserTabEng": "Shikma-Bsor | Ofek Aerial Photography",
         "mapTitle": "רשות ניקוז ונחלים - שקמה בשור",
         "mapTitleEng": "Shikma-Bsor",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1378,9 +1494,78 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
+      }
+    },
+    "Colmobil": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "כלמוביל אנרג'י - שיתוף מיקום",
+        "oblique_app_url": null,
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "portalUrl": "https://oapgis.ofekonline.com/portal",
+        "map.portalUrl": "https://oapgis.ofekonline.com/portal",
+        "appId": "oGgwNFOg3rb76tC9",
+        "map.itemId": "52b87906d187401b83490460c61710b2",
+        "logo": "images/app-logo.gif",
+        "appName": "כלמוביל",
+        "mapTitle": "",
+        "appNameEng": "ColmobilSimPdf",
+        "monitorAppName": "ofek-Colmobil",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "apiKeyHandler": null,
+        "mapLayers": null,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its EXACT name",
+          "--note--2": "hide groups only for energy companies",
+          "Govmap": true,
+          "Slides": true,
+          "Orbit": true,
+          "groups": true,
+          "Colmobil": false,
+          "Enerpoint": false,
+          "FAEnergyTech": true,
+          "VoltaSolar": true,
+          "Edit3dTeralight": true,
+          "FlightProjects": true
+        },
+        "cfg3DTilesByYears": null,
+        "orbit45": null,
+        "orbit360": null,
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0,
+              "scale": 508.5163084446994,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3918630.6103118765,
+                "y": 3734324.0583814094,
+                "z": 1802.6884609563276
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3918630.6103118765,
+                  "y": 3734324.0583814094,
+                  "z": 1802.6884609563276
+                },
+                "heading": 359.9999987925817,
+                "tilt": 16.040664057795773
+              }
+            }
+          }
+        }
       }
     },
     "Doit": {
@@ -1430,7 +1615,6 @@
         "titleBrowserTabEng": "Doit - Baka | Ofek Aerial Photography",
         "mapTitle": "Doit - באקה",
         "mapTitleEng": "Doit - Baka",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1455,7 +1639,81 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
+        "orbit45": null,
+        "orbit360": null
+      }
+    },
+    "DTM_DSM_Swipe": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "שיתוף מיקום - באקה - DTM_DSM_Swipe",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "portalUrl": "https://oapgis.ofekonline.com/portal",
+        "map.portalUrl": "https://oapgis.ofekonline.com/portal",
+        "appId": "oGgwNFOg3rb76tC9",
+        "map.itemId": "bb2421e0d1b84d1b8073eb41335013fa",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 5.649883315762111,
+              "scale": 2292.407542609707,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3901459.152,
+                "y": 3818316.338,
+                "z": 6142.265114332549274
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3901459.152,
+                  "y": 3818316.338,
+                  "z": 6142.265114332549274
+                },
+                "heading": 354.3501166842379,
+                "tilt": 6.132812471348242
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Doit-2023",
+        "titleBrowserTab": "Ofek|DTM_DSM_Swipe",
+        "titleBrowserTabEng": "Doit - Baka | Ofek Aerial Photography",
+        "mapTitle": "DTM_DSM_Swipe",
+        "mapTitleEng": "DTM_DSM_Swipe",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "apiKeyHandler": null,
+        "mapLayers": null,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "SearchGovmap": true,
+          "Govmap": true,
+          "Orbit": true,
+          "Slides": true,
+          "Orbit3D": true,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -1507,7 +1765,6 @@
         "titleBrowserTabEng": "Eilat",
         "mapTitle": "אילת - מודל תלת ממד",
         "mapTitleEng": "Eilat",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -1532,7 +1789,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -1584,7 +1840,6 @@
         "titleBrowserTabEng": "Electricity Live System Demo",
         "mapTitle": "Electricity Live System Demo",
         "mapTitleEng": "Electricity Live System Demo",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1609,7 +1864,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "iec",
           "userPassword": "iec2022!",
@@ -1672,7 +1926,6 @@
         "titleBrowserTabEng": "Ofek-FlightProjects",
         "mapTitle": "אופק - תכנון קווי טיסה",
         "mapTitleEng": "Ofek-FlightProjects",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1697,7 +1950,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -1749,7 +2001,6 @@
         "titleBrowserTabEng": "Gadish | Ofek Aerial Photography",
         "mapTitle": "גדיש - מודל תלת ממד",
         "mapTitleEng": "Gadish",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -1774,7 +2025,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "ofek_sh",
           "userPassword": "ofek2022!",
@@ -1837,7 +2087,6 @@
         "titleBrowserTabEng": "Galil-Mizrahi | Ofek Aerial Photography",
         "mapTitle": "גליל מזרחי - מודל תלת ממד",
         "mapTitleEng": "Galil Mizrahi - 3D Model",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "גושים",
         "apiKeyHandler": null,
@@ -1862,7 +2111,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -1914,7 +2162,6 @@
         "titleBrowserTabEng": "Ganei Tikva Muni | Ofek Aerial Photography",
         "mapTitle": "עיריית גני תקווה - מודל תלת ממד",
         "mapTitleEng": "GaneiTikva",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -1939,7 +2186,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "GaneiTikva",
           "userPassword": "GaneiTikva_2022",
@@ -1996,7 +2242,6 @@
         "titleBrowserTabEng": "Gan Yavne | Ofek Aerial Photography",
         "mapTitle": "גן יבנה - מודל תלת ממד",
         "mapTitleEng": "Gan Yavne",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -2021,7 +2266,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "ganyavne",
           "userPassword": "ganyavne_2022",
@@ -2078,7 +2322,6 @@
         "titleBrowserTabEng": "Gan Yavne Muni | Ofek Aerial Photography",
         "mapTitle": "עיריית גן יבנה - מודל תלת ממד",
         "mapTitleEng": "GAMYAVNE",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -2103,7 +2346,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "ganyavne",
           "userPassword": "ganyavne_2022",
@@ -2160,7 +2402,6 @@
         "titleBrowserTabEng": "Givat Shmuel muni | Ofek Aerial Photography",
         "mapTitle": "עיריית גבעת שמואל - מודל תלת ממד",
         "mapTitleEng": "Givat Shmuel",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -2185,7 +2426,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "givats",
           "userPassword": "givats",
@@ -2242,7 +2482,6 @@
         "titleBrowserTabEng": "Givat-Zeev | Ofek Aerial Photography",
         "mapTitle": "עיריית גבעת זאב - מודל תלת ממד",
         "mapTitleEng": "Givat-Zeev",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -2267,7 +2506,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2319,7 +2557,6 @@
         "titleBrowserTabEng": "HarNuf",
         "mapTitle": "פרויקט הר נוף",
         "mapTitleEng": "Arad",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -2344,7 +2581,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2396,7 +2632,6 @@
         "titleBrowserTabEng": "Haifa",
         "mapTitle": "חיפה - מודל תלת ממד",
         "mapTitleEng": "Haifa",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -2421,7 +2656,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2473,7 +2707,6 @@
         "titleBrowserTabEng": "Haifa",
         "mapTitle": "חיפה - מודל תלת ממד",
         "mapTitleEng": "Haifa",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -2498,7 +2731,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2550,7 +2782,6 @@
         "titleBrowserTabEng": "Holon",
         "mapTitle": "חולון - מודל תלת ממד",
         "mapTitleEng": "Holon",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -2575,7 +2806,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2627,7 +2857,6 @@
         "titleBrowserTabEng": "IEC - Ofek Aerial Photography",
         "mapTitle": "חח\"י - תשתית מיפוי ארצית",
         "mapTitleEng": "IEC - National mapping infrastructure",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -2683,7 +2912,6 @@
             "offset": 10
           }
         ],
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2793,7 +3021,6 @@
             "offset": 10
           }
         ],
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -2845,7 +3072,6 @@
         "titleBrowserTabEng": "IEC_Netivot",
         "mapTitle": "חברת חשמל - נתיבות",
         "mapTitleEng": "IEC_Netivot",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -2870,7 +3096,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "iec",
           "userPassword": "iec2022!",
@@ -2933,7 +3158,6 @@
         "titleBrowserTabEng": "Jerusalem | Ofek Aerial Photography",
         "mapTitle": "ירשולים - מודל תלת ממד",
         "mapTitleEng": "Jerusalem",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -2979,7 +3203,6 @@
             "offset": 1000
           }
         ],
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "jeru",
           "userPassword": "jerusalem",
@@ -3036,7 +3259,6 @@
         "titleBrowserTabEng": "Jerusalem | Ofek Aerial Photography",
         "mapTitle": "ירושלים - מודל תלת ממד",
         "mapTitleEng": "Jerusalem",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -3082,7 +3304,6 @@
             "offset": 1000
           }
         ],
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "jeru",
           "userPassword": "jerusalem",
@@ -3139,7 +3360,6 @@
         "titleBrowserTabEng": "Jerusalem | Ofek Aerial Photography",
         "mapTitle": "ירושלים - מודל תלת ממד",
         "mapTitleEng": "Jerusalem",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -3164,7 +3384,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "jeru",
           "userPassword": "jerusalem",
@@ -3221,7 +3440,6 @@
         "titleBrowserTabEng": "Jerusalem | Ofek Aerial Photography",
         "mapTitle": "ירושלים - מודל תלת ממד",
         "mapTitleEng": "Jerusalem",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -3247,7 +3465,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "jeru",
           "userPassword": "jerusalem",
@@ -3304,7 +3521,6 @@
         "titleBrowserTabEng": "Jerusalem transport | Ofek Aerial Photography",
         "mapTitle": "ירושלים תחבורה - מודל תלת ממד",
         "mapTitleEng": "Jerusalem",
-        "isOfekManager": false,
         "isPublicApp": true,
         "defaultLayerTitleForFilterAndStatistics": "רחובות",
         "apiKeyHandler": null,
@@ -3329,7 +3545,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "Jrs_Transport",
           "userPassword": "Jrs_Transport2022",
@@ -3386,7 +3601,6 @@
         "titleBrowserTabEng": "KARNI",
         "mapTitle": "ש.קרני הנדסה",
         "mapTitleEng": "KARNI",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3411,7 +3625,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -3463,7 +3676,6 @@
         "titleBrowserTabEng": "Kenset",
         "mapTitle": "כנסת - מודל תלת מימד",
         "mapTitleEng": "Kneset",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3488,7 +3700,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -3540,7 +3751,6 @@
         "titleBrowserTabEng": "Kuseife",
         "mapTitle": "כסיפה - מודל תלת ממד",
         "mapTitleEng": "Kuseife",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3565,7 +3775,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -3617,7 +3826,6 @@
         "titleBrowserTabEng": "MateAsher",
         "mapTitle": "מטה אשר - מודל תלת ממד",
         "mapTitleEng": "MateAsher",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3642,7 +3850,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -3694,7 +3901,6 @@
         "titleBrowserTabEng": "Merimonn_Gas",
         "mapTitle": "מרימון גז בצפון | מודל תלת מימד ",
         "mapTitleEng": "Merimon_Gas",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3719,7 +3925,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -3771,7 +3976,6 @@
         "titleBrowserTabEng": "Ofek",
         "mapTitle": " אופק | מודל תלת מימד ",
         "mapTitleEng": "Ofek",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3796,7 +4000,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -3848,7 +4051,6 @@
         "titleBrowserTabEng": "MeyHertzliya",
         "mapTitle": "מי הרצליה - אופק צילומי אוויר",
         "mapTitleEng": "MeyHertzliya",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -3873,7 +4075,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -3931,7 +4132,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "מכנף - מודל תלת ממד",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -3956,7 +4156,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4008,7 +4207,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "משרד המשפטים",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4033,7 +4231,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4085,7 +4282,6 @@
         "titleBrowserTabEng": "MISGAV",
         "mapTitle": "משגב - מודל תלת ממד",
         "mapTitleEng": "MISGAV",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "גושים",
         "apiKeyHandler": null,
@@ -4110,7 +4306,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4162,7 +4357,6 @@
         "titleBrowserTabEng": "Naharia",
         "mapTitle": "נהריה - מודל תלת ממד",
         "mapTitleEng": "Naharia",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -4187,7 +4381,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4239,7 +4432,6 @@
         "titleBrowserTabEng": "Naharia",
         "mapTitle": "נהריה - מודל תלת ממד",
         "mapTitleEng": "Naharia",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -4280,7 +4472,6 @@
             "offset": 10
           }
         ],
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4332,7 +4523,6 @@
         "titleBrowserTabEng": "Netanya",
         "mapTitle": "נתניה - מודל תלת ממד",
         "mapTitleEng": "Netanya",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4388,7 +4578,6 @@
             "offset": 10
           }
         ],
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4440,7 +4629,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "אופק צילומי אויר",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4465,7 +4653,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4517,7 +4704,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "אופק צילומי אויר",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4542,7 +4728,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -4594,7 +4779,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "רכבת תל-אביב ירושלים",
         "mapTitleEng": "TA-JM Train",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4619,7 +4803,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "T_portals",
           "userPassword": "T_portals2023!",
@@ -4676,7 +4859,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "רמת חובב",
         "mapTitleEng": "Ramat Hovav",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4701,7 +4883,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -4759,7 +4940,6 @@
         "titleBrowserTabEng": "Ramat-Negev | Ofek Aerial Photography",
         "mapTitle": "רמת נגב",
         "mapTitleEng": "Ramat-Negev",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4784,7 +4964,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -4842,7 +5021,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "כביש 4",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4867,7 +5045,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": {
           "userName": "road4",
           "userPassword": "road4_2022!",
@@ -4924,7 +5101,6 @@
         "titleBrowserTabEng": "Shlomi",
         "mapTitle": "שלומי- מודל תלת ממד",
         "mapTitleEng": "Shlomi",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -4949,7 +5125,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -5001,7 +5176,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "אוניברסיטת תל אביב",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות מבנים",
         "apiKeyHandler": null,
@@ -5026,7 +5200,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -5078,7 +5251,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "טכניון ",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -5103,7 +5275,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -5161,7 +5332,6 @@
         "titleBrowserTabEng": "Tel Sheva",
         "mapTitle": "תל שבע - מודל תלת ממד",
         "mapTitleEng": "Tel Sheva",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -5186,15 +5356,106 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
+      }
+    },
+    "TelShevaDemo": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "תל שבע מודל תלת ממד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/TelSheva_241761",
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "portalUrl": "https://oapgis.ofekonline.com/portal",
+        "map.portalUrl": "https://oapgis.ofekonline.com/portal",
+        "appId": "oGgwNFOg3rb76tC9",
+        "map.itemId": "4e8c025a12564a859e6196bc4c93306f",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 0.6183118791314541,
+              "scale": 2370.805925982182,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3880951.820004509,
+                "y": 3664374.9131566216,
+                "z": 881.0013197744265
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3880951.820004509,
+                  "y": 3664374.9131566216,
+                  "z": 881.0013197744265
+                },
+                "heading": 359.38168812086855,
+                "tilt": 58.85835822360277
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-TelSheva-2023",
+        "titleBrowserTab": "תל שבע | אופק צילומי אויר",
+        "titleBrowserTabEng": "Tel Sheva",
+        "mapTitle": "תל שבע - מודל תלת ממד",
+        "mapTitleEng": "Tel Sheva",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "apiKeyHandler": null,
+        "mapLayers": null,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "SearchGovmap": false,
+          "Govmap": false,
+          "Slides": false,
+          "Orbit": false,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Manage": false,
+          "Swipe1": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true,
+          "Edit3dFlightProjects": true,
+          "Colmobil": true,
+          "Enerpoint": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Edit3d_2": true,
+          "EBookmark_2": true,
+          "Measurement3D_2": true
+        },
+        "ofekCfg3dTiles": null,
+        "orbit45": {
+          "userName": "leo",
+          "userPassword": "borbeeR5!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "TelSheva"
+        },
+        "orbit360": {
+          "isAutoOpen": false,
+          "userName": "leo",
+          "userPassword": "borbeeR5!",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "TelShevaDemo"
+        }
       }
     },
     "Tveria": {
       "itemsNotInMainCfg": {
         "whatsapp_sharing_title": "טבריה מודל תלת ממד - שיתוף מיקום",
-        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=Tveria  ",
+        "oblique_app_url": "https://idan.ofek-air.com/oblivisionjs/index.aspx?project=Tveria",
         "searchSource2IsAdded": false,
         "searchSource2": null
       },
@@ -5238,7 +5499,6 @@
         "titleBrowserTabEng": "Tveria",
         "mapTitle": "טבריה- מודל תלת ממד",
         "mapTitleEng": "Tveria",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "גושים",
         "apiKeyHandler": null,
@@ -5263,7 +5523,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -5315,7 +5574,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "מתקן פוטו וולטאי רמת מגשימים",
         "mapTitleEng": "Ofek Aerial Photography",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "גושים",
         "apiKeyHandler": null,
@@ -5340,7 +5598,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -5356,7 +5613,7 @@
         "portalUrl": "https://oapgis.ofekonline.com/portal",
         "map.portalUrl": "https://oapgis.ofekonline.com/portal",
         "appId": "oGgwNFOg3rb76tC9",
-        "map.itemId": "c7726e586f4143e08242a0dcf006d82a",
+        "map.itemId": "90698fee8079417a8afae4f4754ff24c",
         "map.mapOptions": {
           "initialState": {
             "viewpoint": {
@@ -5390,9 +5647,8 @@
         "monitorAppName": "Ofek-Weizmann_Institute-2021",
         "titleBrowserTab": "מכון ויצמן | אופק צילומי אויר",
         "titleBrowserTabEng": "Weizmann Institute",
-        "mapTitle": "מכון ויצמן, מודל תלת ממד",
+        "mapTitle": "מכון ויצמן- מודל תלת ממד",
         "mapTitleEng": "Weizmann Institute",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -5417,7 +5673,87 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
+        "orbit45": null,
+        "orbit360": {
+          "isAutoOpen": false,
+          "userName": "Weizmann",
+          "userPassword": "Weizmann_2022",
+          "publicationHost": "https://gis.ofek-air.com/publication",
+          "publicationName": "Weizmann_Institute_widget"
+        }
+      }
+    },
+    "Weizmann_Institute2": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "מכון ויצמן מודל תלת ממד - שיתוף מיקום",
+        "oblique_app_url": "https://gis.ofek-air.com/publication/Weizmann_Institute",
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "portalUrl": "https://oapgis.ofekonline.com/portal",
+        "map.portalUrl": "https://oapgis.ofekonline.com/portal",
+        "appId": "oGgwNFOg3rb76tC9",
+        "map.itemId": "3f476fb9dda841908aba7061a5e4db65",
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 355.25688440452285,
+              "scale": 5049.381393833355,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3875407.327082808,
+                "y": 3751197.583195508,
+                "z": 319.364923004061
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3875407.327082808,
+                  "y": 3751197.583195508,
+                  "z": 319.364923004061
+                },
+                "heading": 0,
+                "tilt": 0
+              }
+            }
+          }
+        },
+        "monitorAppName": "Ofek-Weizmann_Institute-2021",
+        "titleBrowserTab": "ווצמן | אופק צילומי אויר",
+        "titleBrowserTabEng": "Weizmann Institute",
+        "mapTitle": "מכון ויצמן- מודל תלת ממד",
+        "mapTitleEng": "Weizmann Institute",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "",
+        "apiKeyHandler": null,
+        "mapLayers": null,
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+          "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+          "Govmap": false,
+          "Orbit": false,
+          "SearchGovmap": false,
+          "Slides": false,
+          "Orbit3D": false,
+          "OrbitOblique": true,
+          "Edit3dFlightProjects": true,
+          "Edit3dEnerpoint": true,
+          "Edit3dTeralight": true,
+          "Edit3dVoltasolar": true,
+          "Edit3dFAEnergyTech": true,
+          "Manage": true,
+          "Orbit3dPoly": true,
+          "ConvertDWG": true,
+          "GpCad2Shp": true
+        },
+        "ofekCfg3dTiles": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -5475,7 +5811,6 @@
         "titleBrowserTabEng": "Weizmann Institute",
         "mapTitle": "מכון ויצמן, מודל תלת ממד",
         "mapTitleEng": "Weizmann Institute",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -5500,7 +5835,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -5558,7 +5892,6 @@
         "titleBrowserTabEng": "Naharia",
         "mapTitle": "יבנה - מודל תלת ממד",
         "mapTitleEng": "Yavne",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "שמות רחוב",
         "apiKeyHandler": null,
@@ -5583,7 +5916,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }
@@ -5635,7 +5967,6 @@
         "titleBrowserTabEng": "Weizmann Institute",
         "mapTitle": "מכון ויצמן- מודל תלת ממד",
         "mapTitleEng": "Weizmann Institute",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -5660,7 +5991,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": {
           "isAutoOpen": false,
@@ -5718,7 +6048,6 @@
         "titleBrowserTabEng": "Ofek Aerial Photography",
         "mapTitle": "מודל תלת ממד -צפת",
         "mapTitleEng": "Zfat",
-        "isOfekManager": false,
         "isPublicApp": false,
         "defaultLayerTitleForFilterAndStatistics": "",
         "apiKeyHandler": null,
@@ -5743,7 +6072,6 @@
           "GpCad2Shp": true
         },
         "ofekCfg3dTiles": null,
-        "lakeWaterHeight": null,
         "orbit45": null,
         "orbit360": null
       }

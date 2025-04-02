@@ -1,0 +1,1607 @@
+{
+  "____ opekParameters-MODIFY_PER_APP-Top": "תחילת קטע: פרמטרי אופק, בני שינוי ################################# ",
+  "monitorAppName": "Ofek-AradPAtio-2022",
+  "titleBrowserTab": "ערד | אופק צילומי אויר",
+  "titleBrowserTabEng": "Arad | Ofek Aerial Photography",
+  "mapTitle": "ערד פטיו - מודל תלת ממד",
+  "mapTitleEng": "Arad",
+  "portalUrl": "https://oapgis.ofekonline.com/portal",
+  "appId": "oGgwNFOg3rb76tC9",
+  "map": {
+    "itemId": "8d0620caf6804c35bd58528f71a8d86e",
+    "mapOptions": {
+      "initialState": {
+        "viewpoint": {
+          "rotation": 341.467413854049,
+          "scale": 2633.9023524847357,
+          "targetGeometry": {
+            "spatialReference": {
+              "latestWkid": 3857,
+              "wkid": 102100
+            },
+            "x": 3919243.1090910668,
+            "y": 3664946.1940321294,
+            "z": 1498.5870941653848
+          },
+          "camera": {
+            "position": {
+              "spatialReference": {
+                "latestWkid": 3857,
+                "wkid": 102100
+              },
+              "x": 3919243.1090910668,
+              "y": 3664946.1940321294,
+              "z": 1498.5870941653848
+            },
+            "heading": 23.72649503514243,
+            "tilt": 58.67467495803824
+          }
+        }
+      }
+    },
+    "id": "map",
+    "portalUrl": "https://oapgis.ofekonline.com/portal",
+    "3D": true,
+    "2D": false,
+    "position": {
+      "left": 0,
+      "top": 0,
+      "right": 0,
+      "bottom": 0
+    }
+  },
+  "handleApiKey": {
+    "isInUse": false,
+    "apiKey": "AAPTxy8BH1VEsoebNVZXo8HurOJUt0TyHBpqUr49V1xennbcDmPTlsXgJgWxteSbLbBiSBmZsiJYNKuMJaov8g6Ikx4L5z6EPWcPmhb-LU5b_yUydWnT1B-NJTkJWUdf46Swk_AIDmKesP1TTjRxF4qGepOSAMN6_UeJH3FCvo4pcK6n0WtiJRdOeLXZnI_nQlam6rGrWRStMTnOJZp6Uq-HzhsCs3LADI-KxfHAUcno84o.AT1_HQtFafXQ",
+    "useAsGlobal": false,
+    "layersUrls": [
+      "https://services6.arcgis.com/UO2v0XXuZvbL0AJX/arcgis/rest/services/METRO_for_Mlev/FeatureServer"
+    ]
+  },
+  "isOfekManager": false,
+  "isPublicApp": false,
+  "widgetsToHide": {
+    "--note--1": "true = hide, false = show. You can add any widget, by its exact name",
+    "--note--2": "set 'true' for last 3 lines: Orbit3dPoly, ConvertDWG, GpCad2Shp",
+    "SearchGovmap": false,
+    "Govmap": false,
+    "Slides": false,
+    "Orbit": false,
+    "Orbit3D": false,
+    "ImportCad": false,
+    "OrbitOblique": true,
+    "Manage": false,
+    "groups": false,
+    "Colmobil": true,
+    "Colmobil1": true,
+    "Enerpoint": true,
+    "FAEnergyTech": true,
+    "VoltaSolar": true,
+    "Edit3dEnerpoint": true,
+    "Edit3dTeralight": true,
+    "Edit3dVoltasolar": true,
+    "Edit3dFAEnergyTech": true,
+    "Edit3dFlightProjects": true,
+    "Edit3d_2": true,
+    "EBookmark_2": true,
+    "Measurement3D_2": true
+  },
+  "defaultLayerTitleForFilterAndStatistics": "",
+  "lakeWaterHeight": null,
+  "orbit45": null,
+  "orbit360": {
+    "userName": "ofek",
+    "userPassword": "ofek2022!@",
+    "publicationHost": "https://gis.ofek-air.com/publication",
+    "publicationName": "Arad_Patio_Navis_orit"
+  },
+  "ofekCfg3dTiles": null,
+  "____ opekParameters-MODIFY_PER_APP-End": "סוף קטע: פרמטרי אופק, בני שינוי ################################# ",
+  "____ ofekParameters-Constants-Top": "תחילת קטע: פרמטרי אופק, לא בני שינוי",
+  "svrDomain": "https://oapgis.ofekonline.com/",
+  "photorelistic3dGroupTitle": "מידול פוטוריאליסטי",
+  "mapSubtitle": "אופק צילומי אויר",
+  "mapSubtitleEng": "Ofek Aerial Photography",
+  "isVisibleAtInitLaunchpadPanel": true,
+  "maxScreenWidthForGovmap2": 1059,
+  "resolutionSelect": {
+    "high": false,
+    "medium": true,
+    "low": false
+  },
+  "isLogSearch": true,
+  "user3dModelsLayerTitle": "Mlev_3D_Model",
+  "orbit3dLogMaxCnt": 4,
+  "orbitObliqueLogMaxCnt": 4,
+  "isCloudBeforeScene": false,
+  "isHighlightByPointerMove": false,
+  "orbit3dMaxPointsWeizman": 5838,
+  "orbit3dMaxPointsAyalon": 3846,
+  "orbitObliqueIsGeo": false,
+  "orbitObliqueIsGeoRectangleHeight": 40,
+  "vpsHistQuickPanMs": 700,
+  "vpsHistQuickStabilizeMs": 50,
+  "vpsHistShelterMS": 800,
+  "vpsHistFastStepMs": 600,
+  "vpsHistFastStepMsDelta": 10,
+  "vpsHistFastStepMsDeltaNumMax": 50,
+  "logPerNum": 10,
+  "viewshedSyncedCameraExtraTiltDown": 0,
+  "viewshedSyncedCameraExtraFovVertical": 55,
+  "viewshedSyncedCameraExtraFovHorizontal": 28,
+  "viewshedEyeDistanceStep": 0.1,
+  "cameraFovStep": 5,
+  "cameraFovStepContinuous": 1,
+  "cameraFovStepContinuousMs": 5,
+  "cameraTiltStep": 1,
+  "cameraTiltStepContinuous": 0.1,
+  "cameraTiltStepContinuousMs": 5,
+  "cameraHdgStep": 1,
+  "cameraHdgStepContinuous": 0.1,
+  "cameraHdgStepContinuousMs": 5,
+  "sceneRotateStep": 15,
+  "sceneRotateStepContinuous": 0.5,
+  "sceneRotateStepContinuousMs": 5,
+  "sceneTiltStep": 10,
+  "sceneTiltStepContinuous": 0.1,
+  "sceneTiltStepContinuousMs": 5,
+  "tiltHorizintal": 90,
+  "tiltMaxUp": 85,
+  "tiltMaxDn": 0.5,
+  "ofekBucketName": "ofek-apps",
+  "ofekBucketIdentityPoolId": "us-east-2:8482421e-d143-44cf-a585-af69a5e13bb5",
+  "layerToHighlight": "Buildings",
+  "wkidTMUnit": "meter",
+  "wkidTM": 2039,
+  "wkidTMReverse": 108021,
+  "wkidTMUnit-Options": "meter,feet",
+  "wkidTM-Israel": 2039,
+  "wkidTMReverse-Israel": 108021,
+  "wkidTM-Ghana": 2136,
+  "wkidTMReverse-Ghana": 6896,
+  "____ ofekParameters-Constants-End": "סוף קטע: פרמטרי אופק, לא בני שינוי",
+  "widgetOnScreen": {
+    "widgets-unused": [
+      {
+        "comment": "NOT for regular customers !!! Hide it @@@@@@",
+        "uri": "widgets/screen/coordinate/Idan/Widget",
+        "position": {
+          "top": 191,
+          "right": 79,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Idan_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/Idan/",
+        "icon": "widgets/screen/coordinate/Idan/images/icon.png",
+        "name": "Idan"
+      },
+      {
+        "comment": "unused. Hide it @@@@@@",
+        "uri": "widgets/screen/_unused/Highlight/Widget",
+        "position": {
+          "top": 191,
+          "right": 116,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Highlight_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/_unused/Highlight/",
+        "icon": "widgets/screen/_unused/Highlight/images/icon.png",
+        "name": "Highlight"
+      },
+      {
+        "uri": "widgets/screen/_unused/LabelDate/Widget",
+        "position": {
+          "top": 53,
+          "left": 70,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_LabelDate_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/_unused/LabelDate/",
+        "icon": "widgets/screen/_unused/LabelDate/images/icon.png",
+        "name": "LabelDate"
+      }
+    ],
+    "widgets": [
+      {
+        "uri": "themes/LaunchpadTheme/widgets/AnchorBarController/Widget",
+        "position": {
+          "bottomOld": 4,
+          "bottomNew": 13,
+          "bottom": 4,
+          "height": 40,
+          "right": 0,
+          "relativeTo": "map",
+          "zIndex": 0
+        },
+        "version": "2.30",
+        "id": "themes_LaunchpadTheme_widgets_AnchorBarController_Widget",
+        "url": "/webappbuilder/apps/2/themes/LaunchpadTheme/widgets/AnchorBarController/",
+        "icon": "themes/LaunchpadTheme/widgets/AnchorBarController/images/icon.png",
+        "name": "AnchorBarController"
+      },
+      {
+        "uri": "themes/LaunchpadTheme/widgets/Header/Widget",
+        "position": {
+          "top": 9,
+          "left": 5,
+          "width": 670,
+          "height": 46,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "themes_LaunchpadTheme_widgets_Header_Widget",
+        "url": "/webappbuilder/apps/2/themes/LaunchpadTheme/widgets/Header/",
+        "icon": "themes/LaunchpadTheme/widgets/Header/images/icon.png",
+        "hasSearchOverlayed": true,
+        "name": "Header"
+      },
+      {
+        "uri": "widgets/screen/search/Search/Widget",
+        "position": {
+          "top": 21,
+          "left": 344,
+          "zIndex": 1,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Search_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/search/Search/",
+        "icon": "widgets/screen/search/Search/images/icon.png",
+        "config": "configs/Search/config_widgets_Search_Widget.json",
+        "name": "Search"
+      },
+      {
+        "uri": "widgets/screen/search/SearchGovmap/Widget",
+        "position": {
+          "top": 16.5,
+          "left": 505,
+          "zIndex": 1,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_SearchGovmap_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/search/SearchGovmap/",
+        "icon": "widgets/screen/search/SearchGovmap/images/icon.png",
+        "name": "SearchGovmap"
+      },
+      {
+        "uri": "widgets/screen/search/SearchGovmap2/Widget",
+        "position": {
+          "top": 60,
+          "left": 60,
+          "zIndex": 1,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_SearchGovmap2_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/search/SearchGovmap2/",
+        "icon": "widgets/screen/search/SearchGovmap2/images/icon.png",
+        "name": "SearchGovmap2"
+      },
+      {
+        "uri": "widgets/screen/search/SearchHist/Widget",
+        "position": {
+          "top": 97,
+          "left": 193.567,
+          "zIndex": 0,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_SearchHist_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/search/SearchHist/",
+        "icon": "widgets/screen/search/SearchHist/images/icon.png",
+        "name": "SearchHist"
+      },
+      {
+        "uri": "widgets/screen/coordinate/CoordinatesForOblique/Widget",
+        "position": {
+          "top": 9,
+          "right": 396,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CoordinatesForOblique_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/CoordinatesForOblique/",
+        "icon": "widgets/screen/coordinate/CoordinatesForOblique/images/icon.png",
+        "name": "CoordinatesForOblique"
+      },
+      {
+        "uri": "widgets/screen/_various/About/Widget",
+        "position": {
+          "top": 6,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 1,
+        "id": "widgets_About_Widget",
+        "version": "2.30",
+        "closeable": true,
+        "config": "configs/About/config.json",
+        "url": "/webappbuilder/apps/2/widgets/screen/_various/About/",
+        "name": "About"
+      },
+      {
+        "uri": "widgets/screen/_various/LayerList/Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/_various/LayerList/",
+        "position": {
+          "top": 6,
+          "right": 42,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 2,
+        "id": "widgets_LayerList_Widget",
+        "version": "2.30",
+        "closeable": true,
+        "name": "LayerList"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/ViewWidgetsFireworks/Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/ViewWidgetsFireworks/",
+        "position": {
+          "top": 6,
+          "right": 79,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_ViewWidgetsFireworks_Widget",
+        "icon": "widgets/screen/hideHorizontal/ViewWidgetsFireworks/images/icon.png",
+        "name": "ViewWidgetsFireworks"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/ViewWidgetsLaunchpad/Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/ViewWidgetsLaunchpad/",
+        "position": {
+          "bottom": 27,
+          "right": 85,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_ViewWidgetsLaunchpad_Widget",
+        "icon": "widgets/screen/hideHorizontal/ViewWidgetsLaunchpad/images/icon.png",
+        "name": "ViewWidgetsLaunchpad"
+      },
+      {
+        "position": {
+          "top": 6,
+          "right": 116,
+          "relativeTo": "map"
+        },
+        "placeholderIndex": 3,
+        "id": "widgets_Legend_Widget",
+        "version": "2.30",
+        "closeable": true,
+        "uri": "widgets/screen/hideHorizontal/Legend/Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/Legend/",
+        "name": "Legend"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/Daylight/Widget",
+        "position": {
+          "top": 6,
+          "right": 153,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Daylight_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/Daylight/",
+        "icon": "widgets/screen/hideHorizontal/Daylight/images/icon.png",
+        "name": "Daylight"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/Weather/Widget",
+        "position": {
+          "top": 6,
+          "right": 190,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Weather_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/Weather/",
+        "icon": "widgets/screen/hideHorizontal/Weather/images/icon.png",
+        "name": "Weather"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/BasemapGallery/Widget",
+        "position": {
+          "top": 6,
+          "right": 227,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BasemapGallery_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/BasemapGallery/",
+        "icon": "widgets/screen/hideHorizontal/BasemapGallery/images/icon.png",
+        "name": "BasemapGallery"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/BtnSettings/Widget",
+        "position": {
+          "top": 6,
+          "right": 264,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BtnSettings_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/BtnSettings/",
+        "icon": "widgets/screen/hideHorizontal/BtnSettings/images/icon.png",
+        "name": "BtnSettings"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/BtnPerformance/Widget",
+        "position": {
+          "top": 6,
+          "right": 301,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BtnPerformance_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/BtnPerformance/",
+        "icon": "widgets/screen/hideHorizontal/BtnPerformance/images/icon.png",
+        "name": "BtnPerformance"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/BtnCleanCache/Widget",
+        "position": {
+          "top": 6,
+          "right": 338,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BtnCleanCache_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/BtnCleanCache/",
+        "icon": "widgets/screen/hideHorizontal/BtnCleanCache/images/icon.png",
+        "name": "BtnCleanCache"
+      },
+      {
+        "uri": "widgets/screen/hideHorizontal/BtnManage/Widget",
+        "position": {
+          "top": 6,
+          "right": 374,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BtnManage_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideHorizontal/BtnManage/",
+        "icon": "widgets/screen/hideHorizontal/BtnManage/images/icon.png",
+        "name": "BtnManage"
+      },
+      {
+        "uri": "widgets/screen/visual/BkmkPrev/Widget",
+        "position": {
+          "top": 60,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BkmkPrev_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/visual/BkmkPrev/",
+        "icon": "widgets/screen/visual/BkmkPrev/images/icon.png",
+        "name": "BkmkPrev"
+      },
+      {
+        "uri": "widgets/screen/visual/BkmkNext/Widget",
+        "position": {
+          "top": 60,
+          "left": 37.5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BkmkNext_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/visual/BkmkNext/",
+        "icon": "widgets/screen/visual/BkmkNext/images/icon.png",
+        "name": "BkmkNext"
+      },
+      {
+        "uri": "widgets/screen/hideShare/ViewWidgetsShare/Widget",
+        "position": {
+          "top": 98,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.20",
+        "id": "widgets_ViewWidgetsShare_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideShare/ViewWidgetsShare/",
+        "icon": "widgets/screen/hideShare/ViewWidgetsShare/images/icon.png",
+        "name": "ViewWidgetsShare"
+      },
+      {
+        "uri": "widgets/screen/hideShare/ShareByWhatsapp/Widget",
+        "position": {
+          "top": 98,
+          "left": 42,
+          "relativeTo": "map"
+        },
+        "version": "2.20",
+        "id": "widgets_ShareByWhatsapp_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideShare/ShareByWhatsapp/",
+        "icon": "widgets/screen/hideShare/ShareByWhatsapp/images/icon.png",
+        "name": "ShareByWhatsapp"
+      },
+      {
+        "uri": "widgets/screen/hideShare/ShareByEmail/Widget",
+        "position": {
+          "top": 98,
+          "left": 79,
+          "relativeTo": "map"
+        },
+        "version": "2.20",
+        "id": "widgets_ShareByEmail_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideShare/ShareByEmail/",
+        "icon": "widgets/screen/hideShare/ShareByEmail/images/icon.png",
+        "name": "ShareByEmail"
+      },
+      {
+        "uri": "widgets/screen/hideShare/ShareProject/Widget",
+        "position": {
+          "top": 98,
+          "left": 116,
+          "relativeTo": "map"
+        },
+        "version": "2.20",
+        "id": "widgets_ShareProject_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideShare/ShareProject/",
+        "icon": "widgets/screen/hideShare/ShareProject/images/icon.png",
+        "name": "ShareProject"
+      },
+      {
+        "uri": "widgets/screen/hideVertical/ViewWidgetsVertical/Widget",
+        "position": {
+          "top": 135,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_ViewWidgetsVertical_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideVertical/ViewWidgetsVertical/",
+        "icon": "widgets/screen/hideVertical/ViewWidgetsVertical/images/icon.png",
+        "name": "ViewWidgetsVertical"
+      },
+      {
+        "uri": "widgets/screen/hideVertical/ZoomSlider/Widget",
+        "position": {
+          "top": 172,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_ZoomSlider_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideVertical/ZoomSlider/",
+        "icon": "widgets/screen/hideVertical/ZoomSlider/images/icon.png",
+        "name": "ZoomSlider"
+      },
+      {
+        "uri": "widgets/screen/hideVertical/Navigate/Widget",
+        "position": {
+          "top": 241,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Navigate_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideVertical/Navigate/",
+        "icon": "widgets/screen/hideVertical/Navigate/images/icon.png",
+        "name": "Navigate"
+      },
+      {
+        "uri": "widgets/screen/hideVertical/Home/Widget",
+        "position": {
+          "top": 278,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Home_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideVertical/Home/",
+        "icon": "widgets/screen/hideVertical/Home/images/icon.png",
+        "name": "Home"
+      },
+      {
+        "uri": "widgets/screen/hideVertical/MyLocation/Widget",
+        "position": {
+          "top": 315,
+          "left": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_MyLocation_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideVertical/MyLocation/",
+        "icon": "widgets/screen/hideVertical/MyLocation/images/icon.png",
+        "name": "MyLocation"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/ViewWidgetsGyro/Widget",
+        "position": {
+          "top": 43,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_ViewWidgetsGyro_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/ViewWidgetsGyro/",
+        "icon": "widgets/screen/hideGyro/ViewWidgetsGyro/images/icon.png",
+        "name": "ViewWidgetsGyro"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/RotateL/Widget",
+        "position": {
+          "top": 43,
+          "right": 42,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_RotateL_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/RotateL/",
+        "icon": "widgets/screen/hideGyro/RotateL/images/icon.png",
+        "name": "RotateL"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/RotateR/Widget",
+        "position": {
+          "top": 43,
+          "right": 79,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_RotateR_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/RotateR/",
+        "icon": "widgets/screen/hideGyro/RotateR/images/icon.png",
+        "name": "RotateR"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/TiltDn/Widget",
+        "position": {
+          "top": 43,
+          "right": 116,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_TiltDn_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/TiltDn/",
+        "icon": "widgets/screen/hideGyro/TiltDn/images/icon.png",
+        "name": "TiltDn"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/TiltUp/Widget",
+        "position": {
+          "top": 43,
+          "right": 153,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_TiltUp_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/TiltUp/",
+        "icon": "widgets/screen/hideGyro/TiltUp/images/icon.png",
+        "name": "TiltUp"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/CameraFovNarrow/Widget",
+        "position": {
+          "top": 43,
+          "right": 190,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CameraFovNarrow_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/CameraFovNarrow/",
+        "icon": "widgets/screen/hideGyro/CameraFovNarrow/images/icon.png",
+        "name": "CameraFovNarrow"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/CameraFovWide/Widget",
+        "position": {
+          "top": 43,
+          "right": 227,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CameraFovWide_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/CameraFovWide/",
+        "icon": "widgets/screen/hideGyro/CameraFovWide/images/icon.png",
+        "name": "CameraFovWide"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/CameraTiltUp/Widget",
+        "position": {
+          "top": 43,
+          "right": 264,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CameraTiltUp_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/CameraTiltUp/",
+        "icon": "widgets/screen/hideGyro/CameraTiltUp/images/icon.png",
+        "name": "CameraTiltUp"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/CameraTiltDn/Widget",
+        "position": {
+          "top": 43,
+          "right": 301,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CameraTiltDn_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/CameraTiltDn/",
+        "icon": "widgets/screen/hideGyro/CameraTiltDn/images/icon.png",
+        "name": "CameraTiltDn"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/CameraHdgLeft/Widget",
+        "position": {
+          "top": 43,
+          "right": 338,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CameraHdgLeft_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/CameraHdgLeft/",
+        "icon": "widgets/screen/hideGyro/CameraHdgLeft/images/icon.png",
+        "name": "CameraHdgLeft"
+      },
+      {
+        "uri": "widgets/screen/hideGyro/CameraHdgRight/Widget",
+        "position": {
+          "top": 43,
+          "right": 375,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_CameraHdgRight_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/hideGyro/CameraHdgRight/",
+        "icon": "widgets/screen/hideGyro/CameraHdgRight/images/icon.png",
+        "name": "CameraHdgRight"
+      },
+      {
+        "uri": "widgets/screen/visual/Compass/Widget",
+        "position": {
+          "top": 80,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Compass_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/visual/Compass/",
+        "icon": "widgets/screen/visual/Compass/images/icon.png",
+        "name": "Compass"
+      },
+      {
+        "uri": "widgets/screen/visual/FullScreen/Widget",
+        "position": {
+          "top": 117,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_FullScreen_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/visual/FullScreen/",
+        "icon": "widgets/screen/visual/FullScreen/images/icon.png",
+        "name": "FullScreen"
+      },
+      {
+        "uri": "widgets/screen/coordinate/Govmap/Widget",
+        "position": {
+          "top": 154,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Govmap_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/Govmap/",
+        "icon": "widgets/screen/coordinate/Govmap/images/icon.png",
+        "name": "Govmap"
+      },
+      {
+        "uri": "widgets/screen/coordinate/Orbit/Widget",
+        "position": {
+          "top": 191,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Orbit_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/Orbit/",
+        "icon": "widgets/screen/coordinate/Orbit/images/icon.png",
+        "name": "Orbit"
+      },
+      {
+        "comment": "NOT for regular customers !!! Unused @@@@@@",
+        "uri": "widgets/screen/coordinate/BtnOrbit3dPoly/Widget",
+        "position": {
+          "top": 191,
+          "right": 42,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_BtnOrbit3dPoly_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/BtnOrbit3dPoly/",
+        "icon": "widgets/screen/coordinate/BtnOrbit3dPoly/images/icon.png",
+        "name": "BtnOrbit3dPoly"
+      },
+      {
+        "uri": "widgets/screen/orbit/OrbitOblique/Widget",
+        "position": {
+          "top": 228,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_OrbitOblique_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/orbit/OrbitOblique/",
+        "icon": "widgets/screen/orbit/OrbitOblique/images/icon.png",
+        "name": "OrbitOblique"
+      },
+      {
+        "comment": "NOT for regular customers !!! Unused @@@@@@",
+        "uri": "widgets/screen/orbit/Orbit3dPoly/Widget",
+        "position": {
+          "top": 228,
+          "right": 42,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Orbit3dPoly_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/orbit/Orbit3dPoly/",
+        "icon": "widgets/screen/orbit/Orbit3dPoly/images/icon.png",
+        "name": "Orbit3dPoly"
+      },
+      {
+        "uri": "widgets/screen/orbit/Orbit3D/Widget",
+        "position": {
+          "top": 265,
+          "right": 5,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Orbit3D_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/orbit/Orbit3D/",
+        "icon": "widgets/screen/orbit/Orbit3D/images/icon.png",
+        "name": "Orbit3D"
+      },
+      {
+        "uri": "widgets/screen/visual/LabelHist/Widget",
+        "position": {
+          "top": 278,
+          "right": 215,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_LabelHist_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/visual/LabelHist/",
+        "icon": "widgets/screen/visual/LabelHist/images/icon.png",
+        "name": "LabelHist"
+      },
+      {
+        "uri": "widgets/screen/coordinate/Coordinate/Widget",
+        "position": {
+          "bottom": 4,
+          "left": 3,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Coordinate_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/Coordinate/",
+        "icon": "widgets/screen/coordinate/Coordinate/images/icon.png",
+        "name": "Coordinate",
+        "config": "configs/Coordinate/config_widgets_Coordinate_Widget.json"
+      },
+      {
+        "uri": "widgets/screen/_various/LabelBookmark/Widget",
+        "position": {
+          "bottom": 100,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_LabelBookmark_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/_various/LabelBookmark/",
+        "icon": "widgets/screen/_various/LabelBookmark/images/icon.png",
+        "name": "LabelBookmark"
+      },
+      {
+        "uri": "widgets/screen/coordinate/Coordinates/Widget",
+        "position": {
+          "bottom": 21.53,
+          "left": 3,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Coordinates_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/coordinate/Coordinates/",
+        "icon": "widgets/screen/coordinate/Coordinates/images/icon.png",
+        "name": "Coordinates"
+      },
+      {
+        "uri": "widgets/screen/_various/Watermark/Widget",
+        "position": {
+          "bottom": 15,
+          "right": 15,
+          "relativeTo": "map"
+        },
+        "version": "2.30",
+        "id": "widgets_Watermark_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/_various/Watemrark/",
+        "icon": "widgets/screen/_various/Watermark/images/icon.png",
+        "name": "Watermark"
+      },
+      {
+        "uri": "widgets/screen/_various/Splash/Widget",
+        "position": {
+          "relativeTo": "browser"
+        },
+        "version": "2.30",
+        "id": "widgets_Splash_Widget",
+        "url": "/webappbuilder/apps/2/widgets/screen/_various/Splash/",
+        "icon": "widgets/screen/_various/Splash/images/icon.png",
+        "name": "Splash",
+        "config": "configs/Splash/config_widgets_Splash_Widget.json"
+      }
+    ],
+    "panel": {
+      "uri": "jimu/OnScreenWidgetPanel",
+      "position": {
+        "relativeTo": "map"
+      }
+    }
+  },
+  "widgetPool": {
+    "panel": {
+      "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+      "position": {
+        "relativeTo": "map"
+      }
+    },
+    "groups": [
+      {
+        "label": "מגירת כלי ייבוא",
+        "widgets": [
+          {
+            "name": "AddShapefile",
+            "version": "2.30",
+            "uri": "widgets/drawer/import/AddShapefile/Widget",
+            "index": 1,
+            "id": "widgets_AddShapefile_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/import/AddShapefile/"
+          },
+          {
+            "name": "ImportGlb",
+            "version": "2.30",
+            "uri": "widgets/drawer/import/ImportGlb/Widget",
+            "config": "configs/ImportGlb/config_widgets_ImportGlb_Widget.json",
+            "index": 2,
+            "id": "widgets_ImportGlb_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/import/ImportGlb/",
+            "position": {
+              "relativeTo": "map"
+            }
+          },
+          {
+            "name": "ImportCad",
+            "version": "2.30",
+            "uri": "widgets/drawer/import/ImportCad/Widget",
+            "index": 3,
+            "id": "widgets_ImportCad_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/import/ImportCad/",
+            "label1": "Import-Cad"
+          }
+        ],
+        "index": 1,
+        "id": "LaunchpadPanel_widgetsGroup_import",
+        "visible": true,
+        "panel": {
+          "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+          "position": {
+            "relativeTo": "map"
+          }
+        },
+        "icon": "themes/LaunchpadTheme/images/ofek/drawers/group_import.png",
+        "groupPopupTitle": "Configure"
+      },
+      {
+        "label": "כלי עריכת שכבות",
+        "widgets": [
+          {
+            "name": "Edit3d",
+            "version": "2.30",
+            "uri": "widgets/drawer/edit/Edit3d/Widget",
+            "config": "configs/Edit3d/config_widgets_Edit3d_Widget.json",
+            "index": 1,
+            "id": "widgets_Edit3d_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/edit/Edit3d/"
+          },
+          {
+            "name": "Slice",
+            "version": "2.30",
+            "uri": "widgets/drawer/edit/Slice/Widget",
+            "config": "configs/Slice/config_widgets_Slice_Widget.json",
+            "index": 2,
+            "id": "widgets_Slice_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/edit/Slice/"
+          },
+          {
+            "name": "Modify",
+            "version": "2.30",
+            "uri": "widgets/drawer/edit/Modify/Widget",
+            "index": 3,
+            "id": "widgets_Modify_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/edit/Modify/"
+          }
+        ],
+        "index": 2,
+        "id": "LaunchpadPanel_widgetsGroup_edit",
+        "visible": true,
+        "panel": {
+          "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+          "position": {
+            "relativeTo": "map"
+          }
+        },
+        "icon": "themes/LaunchpadTheme/images/ofek/drawers/group_edit.png",
+        "groupPopupTitle": "Configure"
+      },
+      {
+        "label": "סינון וניתוח טבלות",
+        "widgets": [
+          {
+            "name": "Statistics1",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/Statistics/1/Widget",
+            "index": 1,
+            "id": "widgets_Statistics1_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/Statistics/1/"
+          },
+          {
+            "name": "FilterPoly1",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/FilterPoly/1/Widget",
+            "index": 2,
+            "id": "widgets_FilterPoly1_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/FilterPoly/1/"
+          },
+          {
+            "name": "Filter1",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/Filter/1/Widget",
+            "config": "configs/Filters/config_widgets_Filters.json",
+            "cfgall": "configs/Filters/config_widgets_Filters.json",
+            "index": 3,
+            "id": "widgets_Filter1_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/Filter/1/"
+          }
+        ],
+        "index": 3,
+        "id": "LaunchpadPanel_widgetsGroup_filter",
+        "visible": true,
+        "panel": {
+          "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+          "position": {
+            "relativeTo": "map"
+          }
+        },
+        "icon": "themes/LaunchpadTheme/images/ofek/drawers/group_table.png",
+        "groupPopupTitle": "Configure"
+      },
+      {
+        "label": "מגירת כלי מדידות ואנליזות מפה",
+        "widgets": [
+          {
+            "name": "Measurement3D",
+            "version": "2.30",
+            "uri": "widgets/drawer/measure/Measurement3D/Widget",
+            "config": "configs/Measurement3D/config_widgets_Measurement3D_Widget.json",
+            "index": 1,
+            "id": "widgets_Measurement3D_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/measure/Measurement3D/"
+          },
+          {
+            "name": "LineOfSight",
+            "version": "2.30",
+            "uri": "widgets/drawer/measure/LineOfSight/Widget",
+            "config": "configs/LineOfSight/config_widgets_LineOfSight_Widget.json",
+            "index": 2,
+            "id": "widgets_LineOfSight_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/measure/LineOfSight/"
+          },
+          {
+            "name": "Viewshed",
+            "version": "2.30",
+            "uri": "widgets/drawer/measure/Viewshed/Widget",
+            "config": "configs/Viewshed/config_widgets_Viewshed_Widget.json",
+            "index": 3,
+            "id": "widgets_Viewshed_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/measure/Viewshed/"
+          },
+          {
+            "name": "ElevationProfile",
+            "version": "2.30",
+            "uri": "widgets/drawer/measure/ElevationProfile/Widget",
+            "config": "configs/ElevationProfile/config_widgets_ElevationProfile_Widget.json",
+            "index": 4,
+            "id": "widgets_ElevationProfile_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/measure/ElevationProfile/"
+          },
+          {
+            "name": "ShadowAccumulation",
+            "version": "2.30",
+            "uri": "widgets/drawer/measure/ShadowAccumulation/Widget",
+            "index": 5,
+            "id": "widgets_ShadowAccumulation_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/measure/ShadowAccumulation/"
+          }
+        ],
+        "index": 4,
+        "id": "LaunchpadPanel_widgetsGroup_measure",
+        "visible": true,
+        "panel": {
+          "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+          "position": {
+            "relativeTo": "map"
+          }
+        },
+        "icon": "themes/LaunchpadTheme/images/ofek/drawers/group_meter.png",
+        "groupPopupTitle": "Configure"
+      },
+      {
+        "label": "כלים חזותיים",
+        "widgets": [
+          {
+            "name": "ScreenShot",
+            "version": "2.30",
+            "uri": "widgets/drawer/visual/ScreenShot/Widget",
+            "config": "configs/ScreenShot/config_widgets_ScreenShot_Widget.json",
+            "index": 1,
+            "id": "widgets_ScreenShot_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/visual/ScreenShot/"
+          },
+          {
+            "name": "EBookmark",
+            "version": "2.30",
+            "uri": "widgets/drawer/visual/EBookmark/Widget",
+            "index": 2,
+            "id": "widgets_EBookmark_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/visual/EBookmark/",
+            "IsController": false,
+            "hasLocale1": true,
+            "hasSettingLocale1": true
+          },
+          {
+            "name": "Compare",
+            "version": "2.30",
+            "uri": "widgets/drawer/visual/Compare/Widget",
+            "index": 3,
+            "id": "widgets_Compare_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/visual/Compare/"
+          }
+        ],
+        "index": 5,
+        "id": "LaunchpadPanel_widgetsGroup_visual",
+        "visible": true,
+        "panel": {
+          "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+          "position": {
+            "relativeTo": "map"
+          }
+        },
+        "icon": "themes/LaunchpadTheme/images/ofek/drawers/group_visual.png",
+        "groupPopupTitle": "Configure"
+      },
+      {
+        "labelComment": "מגירת כלי ניהול + טבלת רשומות",
+        "label": "כלים מוסתרים",
+        "hide": true,
+        "widgets": [
+          {
+            "name": "Manage",
+            "version": "2.30",
+            "uri": "widgets/drawer/_various/Manage/Widget",
+            "index": 1,
+            "id": "widgets_Manage_Widget",
+            "url": "/webappbuilder/apps/2/widgetstoolsDrawer_Various/Manage/"
+          },
+          {
+            "name": "AttributeTable1",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/AttributeTable/1/Widget",
+            "index": 2,
+            "id": "widgets_AttributeTable1_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/AttributeTable/1/"
+          },
+          {
+            "name": "AttributeTable2",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/AttributeTable/2/Widget",
+            "index": 3,
+            "id": "widgets_AttributeTable2_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/AttributeTable/2/"
+          },
+          {
+            "name": "AttributeTable3",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/AttributeTable/3/Widget",
+            "index": 4,
+            "id": "widgets_AttributeTable3_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/AttributeTable/3/"
+          },
+          {
+            "name": "Statistics2",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/Statistics/2/Widget",
+            "index": 5,
+            "id": "widgets_Statistics2_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/Statistics/2/"
+          },
+          {
+            "name": "Statistics3",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/Statistics/3/Widget",
+            "index": 6,
+            "id": "widgets_Statistics3_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/Statistics/3/"
+          },
+          {
+            "name": "Filter2",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/Filter/2/Widget",
+            "config": "configs/Filters/config_widgets_Filters.json",
+            "cfgall": "configs/Filters/config_widgets_Filters.json",
+            "index": 7,
+            "id": "widgets_Filter2_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/Filter/2/"
+          },
+          {
+            "name": "Filter3",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/Filter/3/Widget",
+            "config": "configs/Filters/config_widgets_Filters.json",
+            "cfgall": "configs/Filters/config_widgets_Filters.json",
+            "index": 8,
+            "id": "widgets_Filter3_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/Filter/3/"
+          },
+          {
+            "name": "FilterPoly2",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/FilterPoly/2/Widget",
+            "index": 9,
+            "id": "widgets_FilterPoly2_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/FilterPoly/2/"
+          },
+          {
+            "name": "FilterPoly3",
+            "version": "2.30",
+            "uri": "widgets/drawer/table/FilterPoly/3/Widget",
+            "index": 10,
+            "id": "widgets_FilterPoly3_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/table/FilterPoly/3/"
+          },
+          {
+            "name": "ConvertDWG",
+            "version": "2.30",
+            "uri": "widgets/drawer/import/ConvertDWG/Widget",
+            "config": "configs/ConvertDWG/config_widgets_ConvertDWG_Widget.json",
+            "index": 11,
+            "id": "widgets_ConvertDWG_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/import/ConvertDWG/"
+          },
+          {
+            "name": "GpCad2Shp",
+            "version": "2.30",
+            "uri": "widgets/drawer/import/GpCad2Shp/Widget",
+            "index": 12,
+            "id": "widgets_GpCad2Shp_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/import/GpCad2Shp/",
+            "label1": "Cad-to-Shp"
+          },
+          {
+            "name": "Performance",
+            "version": "2.30",
+            "uri": "widgets/drawer/_various/Performance/Widget",
+            "index": 13,
+            "id": "widgets_Performance_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/_various/Performance/"
+          },
+          {
+            "name": "Settings",
+            "version": "2.30",
+            "uri": "widgets/drawer/_various/Settings/Widget",
+            "index": 14,
+            "id": "widgets_Settings_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/_various/Settings/"
+          },
+          {
+            "name": "Help",
+            "version": "2.30",
+            "uri": "widgets/drawer/_various/Help/Widget",
+            "index": 15,
+            "id": "widgets_Help_Widget",
+            "url": "/webappbuilder/apps/2/widgets/drawer/_various/Help/"
+          }
+        ],
+        "index": 28,
+        "id": "LaunchpadPanel_widgetsGroup_hidden",
+        "visible": true,
+        "panel": {
+          "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel",
+          "position": {
+            "relativeTo": "map"
+          }
+        },
+        "icon": "themes/LaunchpadTheme/images/ofek/drawers/group_manage.png",
+        "groupPopupTitle": "Configure",
+        "openAtStart": false
+      }
+    ],
+    "widgets": [
+      {
+        "uri": "widgets/drawer/_various/Slides/Widget",
+        "version": "2.30",
+        "id": "widgets_Slides_Widget",
+        "name": "Slides",
+        "url": "/webappbuilder/apps/2/widgets/drawer/_various/Slides/",
+        "openAtStart": false,
+        "index": 7,
+        "icon": "widgets/drawer/_various/Slides/images/icon.png"
+      },
+      {
+        "name": "Edit3dFlightProjects",
+        "version": "2.30",
+        "uri": "widgets/drawer/edit/Edit3dFlightProjects/Widget",
+        "config": "configs/Edit3dFlightProjects/config_widgets_Edit3dFlightProjects_Widget.json",
+        "index": 8,
+        "id": "widgets_Edit3dFlightProjects_Widget",
+        "url": "/webappbuilder/apps/2/widgets/drawer/edit/Edit3dFlightProjects/"
+      },
+      {
+        "name": "Edit3dEnerpoint",
+        "version": "2.30",
+        "uri": "widgets/drawer/edit/Edit3dEnerpoint/Widget",
+        "config": "configs/Edit3dEnerpoint/config_widgets_Edit3dEnerpoint_Widget.json",
+        "index": 9,
+        "id": "widgets_Edit3dEnerpoint_Widget",
+        "url": "/webappbuilder/apps/2/widgets/drawer/edit/Edit3dEnerpoint/"
+      },
+      {
+        "name": "Edit3dFAEnergyTech",
+        "version": "2.30",
+        "uri": "widgets/drawer/edit/Edit3dFAEnergyTech/Widget",
+        "config": "configs/Edit3dFAEnergyTech/config_widgets_Edit3dFAEnergyTech_Widget.json",
+        "index": 10,
+        "id": "widgets_Edit3dFAEnergyTech_Widget",
+        "url": "/webappbuilder/apps/2/widgets/drawer/edit/Edit3dFAEnergyTech/"
+      },
+      {
+        "name": "Edit3dTeralight",
+        "version": "2.30",
+        "uri": "widgets/drawer/edit/Edit3dTeralight/Widget",
+        "config": "configs/Edit3dTeralight/config_widgets_Edit3dTeralight_Widget.json",
+        "index": 11,
+        "id": "widgets_Edit3dTeralight_Widget",
+        "url": "/webappbuilder/apps/2/widgets/drawer/edit/Edit3dTeralight/"
+      },
+      {
+        "name": "Edit3dVoltasolar",
+        "version": "2.30",
+        "uri": "widgets/drawer/edit/Edit3dVoltasolar/Widget",
+        "config": "configs/Edit3dVoltasolar/config_widgets_Edit3dVoltasolar_Widget.json",
+        "index": 12,
+        "id": "widgets_Edit3dVoltasolar_Widget",
+        "url": "/webappbuilder/apps/2/widgets/drawer/edit/Edit3dVoltasolar/"
+      }
+    ]
+  },
+  "loadingPage": {
+    "backgroundColor": "#508dca",
+    "backgroundImage": {
+      "visible": false
+    },
+    "loadingGif": {
+      "visible": true,
+      "uri": "configs/loading/images/predefined_loading_1.gif",
+      "width": 58,
+      "height": 29
+    }
+  },
+  "isTemplateApp": true,
+  "keepAppState": false,
+  "titleColor": null,
+  "isWebTier": false,
+  "wabVersion": "2.30",
+  "configWabVersion": "2.30",
+  "logo": "images/app-logo.png",
+  "theme": {
+    "name": "LaunchpadTheme",
+    "styles": [
+      "default",
+      "style2",
+      "style3"
+    ],
+    "version": "2.30",
+    "sharedTheme": {
+      "useHeader": true,
+      "useLogo": true,
+      "isPortalSupport": true
+    },
+    "customStyles": {
+      "mainBackgroundColor": null
+    }
+  },
+  "mobileLayout": {
+    "widgetOnScreen": {
+      "widgets": [
+        {
+          "uri": "themes/LaunchpadTheme/widgets/AnchorBarController/Widget",
+          "position": {
+            "bottom": 24,
+            "height": 40,
+            "relativeTo": "map",
+            "zIndex": 0
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "themes/LaunchpadTheme/widgets/Header/Widget",
+          "position": {
+            "left": 9,
+            "top": 10,
+            "width": 670,
+            "height": 46,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/screen/search/Search/Widget",
+          "position": {
+            "left": 344,
+            "top": 16,
+            "zIndex": 1,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/screen/hideVertical/ZoomSlider/Widget",
+          "position": {
+            "left": 17,
+            "top": 78,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/screen/hideVertical/Home/Widget",
+          "position": {
+            "left": 17,
+            "top": 153,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/screen/hideVertical/MyLocation/Widget",
+          "position": {
+            "left": 17,
+            "top": 191,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/screen/hideVertical/Navigate/Widget",
+          "position": {
+            "left": 17,
+            "top": 229,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/Coordinate/Widget",
+          "position": {
+            "left": 10,
+            "bottom": 24,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/Compass/Widget",
+          "position": {
+            "right": 20,
+            "top": 69,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/FullScreen/Widget",
+          "position": {
+            "right": 20,
+            "top": 111,
+            "relativeTo": "map"
+          },
+          "version": "2.30"
+        },
+        {
+          "uri": "widgets/Splash/Widget",
+          "visible": false,
+          "position": {
+            "relativeTo": "browser"
+          },
+          "version": "2.30"
+        },
+        {
+          "position": {
+            "left": 10,
+            "bottom": 195,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "position": {
+            "left": 10,
+            "bottom": 155,
+            "relativeTo": "map"
+          }
+        },
+        {
+          "position": {
+            "left": 10,
+            "bottom": 115,
+            "relativeTo": "map"
+          }
+        }
+      ]
+    },
+    "map": {
+      "position": {
+        "left": 0,
+        "top": 0,
+        "right": 0,
+        "bottom": 0
+      }
+    },
+    "widgetPool": {
+      "panel": {
+        "uri": "themes/LaunchpadTheme/panels/LaunchpadPanel/Panel"
+      }
+    }
+  },
+  "authorizedCrossOriginDomains": [
+    "oapgis.ofekonline.com",
+    "3d.ofek-air.com",
+    "ofek.maps.arcgis.com",
+    "gis.eastnegev.org",
+    "esri.com",
+    "arcgis.com",
+    "arcgisonline.com",
+    "blob.core.windows.net",
+    "ntmlnz377.net.iec.co.il",
+    "ago-item-storage.s3.amazonaws.com",
+    "ago-item-storage.s3.us-east-1.amazonaws.com",
+    "ago-item-storage.s3.us-east-2.amazonaws.com",
+    "prd-ago-items.s3.eu-west-1.amazonaws.com",
+    "prd-ago-items.s3.eu-west-2.amazonaws.com",
+    "prd-ago-items.s3.eu-west-3.amazonaws.com",
+    "prd-ago-items.s3.eu-central-1.amazonaws.com"
+  ],
+  "geometryService": "https://utility.arcgisonline.com/arcgis/rest/services/Geometry/GeometryServer",
+  "links": [],
+  "httpProxy-any-portal": {
+    "useProxy": true,
+    "alwaysUseProxy": false,
+    "url": "",
+    "rules": []
+  },
+  "httpProxy-wab-mlev": {
+    "useProxy": true,
+    "url": "https://mlev-pc-hp:2030/proxy.js"
+  },
+  "httpProxy": {
+    "useProxy": true,
+    "alwaysUseProxy": false,
+    "url": "",
+    "rules": []
+  }
+}

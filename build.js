@@ -1,6 +1,8 @@
 ﻿/** Programmer: Michael Lev mlev.mail@gmail.com 
  * Last edited: 202404-08-19-10 
  * Description: program to create WAB apps from last-version-app
+ * find all empty lines:
+^(?:[\t ]*(?:\r?\n|\r))+
  */
 import * as fs from 'fs'
 import path from 'path'
@@ -11,7 +13,7 @@ import JSZip from 'jszip'
 //import asyncUnzip from 'async-unzip';
 //const { ZipFile, EntryType } = asyncUnzip;
 //import async from 'async'
-const __PROGRAM_VERSION = "v24_08_28"
+const __PROGRAM_VERSION = "v25_04_03"
 const __CONFIG_FILE = '_buildCfg.json'
 const __APPS_LOGOS_FOLDER = "_appsLogos"
 let __bldCfg = null
@@ -43,22 +45,20 @@ async function wk() {
     "map.portalUrl",
     "appId",
     "map.itemId",
-    "map.mapOptions",
-    "monitorAppName",
-    "titleBrowserTab",
-    "titleBrowserTabEng",
+    "logo",
+    "appName",
     "mapTitle",
-    "mapTitleEng",
-    "isOfekManager",
+    "appNameEng",
+    "monitorAppName",
     "isPublicApp",
     "defaultLayerTitleForFilterAndStatistics",
-    "widgetsToHide",
     "apiKeyHandler",
     "mapLayers",
-    "ofekCfgMaps3d",
-    "lakeWaterHeight",
+    "widgetsToHide",
+    "cfg3DTilesByYears",
     "orbit45",
-    "orbit360"
+    "orbit360",
+    "map.mapOptions"
   ]
   const _filepathBuildCfg = path.resolve(processDir, __CONFIG_FILE)
   try {
@@ -72,8 +72,8 @@ async function wk() {
   /** check cfg for missing top items */
   /********************************** */
   const _cfgTopItems = [
-    "CONFIG_VERSION", "appId",
     "isDeleteTargetAppOnFail", "isCreateAppByZipElseByCopy", "isCopyByNodeElseByChildProcess",
+    "CONFIG_VERSION", "appId",
     "newVersionApp", "allAppsFolder", "apps"]
   let ok = true
   let missingItems = []
@@ -455,13 +455,16 @@ async function wk() {
         }
       }//modify target app - 1 - index.html - whatsapp_sharing_title
       {//modify target app - 2 - copy customer logo
-        const logoImageSourcePath = path.resolve(processDir, __APPS_LOGOS_FOLDER, appFoldername + ".png")
+        let logoExtension = bldCfgAppObjCurr.itemsInMainCfg.logo.substring(bldCfgAppObjCurr.itemsInMainCfg.logo.length - 4);//".png"
+        const logoImageSourcePath = path.resolve(processDir, __APPS_LOGOS_FOLDER, appFoldername + logoExtension);
         if (!await exists(logoImageSourcePath)) {
           __msgPart2 = (`FAILED: Logo image source path to copy from, does not exist: ${logoImageSourcePath}`)
           await stopperClearAsync(appPathTarget)
           continue
         }
-        const logoImageDestinationPath = await getFilepath([appPathTarget, "images", "app-logo.png"])
+        //console.log(bldCfgAppObjCurr.itemsInMainCfg.logo.split("/")[1])
+        const logoImageDestinationPath = await getFilepath([appPathTarget, "images",
+          bldCfgAppObjCurr.itemsInMainCfg.logo.split("/")[1]])
         if (!logoImageDestinationPath) {
           __msgPart2 = (`FAILED: Logo image destination path does not exist: ` +
             `${path.join(appPathTarget, _CUSTOMER_LOGO_FILENAME_IN_TARGET_APP)}`)//TODO
@@ -470,6 +473,7 @@ async function wk() {
         }
         if (logoImageDestinationPath) {
           try {
+            //console.log(`logoImageSourcePath: ${logoImageSourcePath}, logoImageDestinationPath: ${logoImageDestinationPath}`)
             await fs.promises.copyFile(logoImageSourcePath, logoImageDestinationPath)
           } catch (err) {
             const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
@@ -481,7 +485,7 @@ async function wk() {
       }//modify target app - 2 - copy customer logo
       {/** modify Search widget config */
         if (bldCfgAppObjCurr.itemsNotInMainCfg.searchSource2IsAdded) {//for Ashkelon
-          let filepathSearchCfg = await getFilepath([appPathTarget, "configs/Search", "config_widgets_Search_Widget.json"])
+          let filepathSearchCfg = await getFilepath([appPathTarget, "configs/Search", "config.json"])
           if (!filepathSearchCfg) {//tst
             __msgPart2 = (`FAILED: oblique widget config file does not exist: ${filepathSearchCfg}`)
             await stopperClearAsync(appPathTarget)
@@ -1100,13 +1104,11 @@ function evaluateMissingItems(mainCfgItems, currMainCfgObj) {
     switch (arr.length) {
       case 1:
         switch (cfgItem) {
-          case "isOfekManager"://we allow false, but not undefined
           case "isPublicApp"://we allow false, but not undefined
           case "apiKeyHandler"://we allow null
           case "mapLayers"://we allow null
           //case "widgetsToHide":
-          case "ofekCfg3dTiles"://we allow null or empty array
-          case "lakeWaterHeight"://we allow null
+          case "cfg3DTilesByYears"://we allow null or empty array
           case "orbit45"://we allow null
           case "orbit360"://we allow null
             if (typeof (currMainCfgObj[arr[0]]) !== "undefined") {
