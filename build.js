@@ -8,12 +8,14 @@ import * as fs from 'fs'
 import path from 'path'
 import { spawn } from 'child_process'
 import { clearInterval } from 'timers'
+import archiver from 'archiver'
+import unzipper from 'unzipper'
 import AdmZip from 'adm-zip'
 import JSZip from 'jszip'
 //import asyncUnzip from 'async-unzip';
 //const { ZipFile, EntryType } = asyncUnzip;
 //import async from 'async'
-const __PROGRAM_VERSION = "v25_04_03"
+const __PROGRAM_VERSION = "v25_04_09"
 const __CONFIG_FILE = '_buildCfg.json'
 const __APPS_LOGOS_FOLDER = "_appsLogos"
 let __bldCfg = null
@@ -41,10 +43,9 @@ async function wk() {
   /** read cfg*/
   /********** */
   const __mainCfgItems = [//reference list - app main config items
-    "portalUrl",
-    "map.portalUrl",
     "appId",
     "map.itemId",
+    "map.portalUrl",
     "logo",
     "appName",
     "mapTitle",
@@ -52,15 +53,19 @@ async function wk() {
     "monitorAppName",
     "isPublicApp",
     "defaultLayerTitleForFilterAndStatistics",
-    "apiKeyHandler",
-    "mapLayers",
     "widgetsToHide",
-    "cfg3DTilesByYears",
+    "photorealistic3DTilesByYears",
     "orbit45",
     "orbit360",
+    "mapLayers",
+    "apiKeyHandler",
     "map.mapOptions"
   ]
   const _filepathBuildCfg = path.resolve(processDir, __CONFIG_FILE)
+  console.log(`processDir:${processDir}`)
+  if (processDir.includes("Sync")) {
+
+  }
   try {
     __bldCfg = await readJson(_filepathBuildCfg)
   } catch (err) {
@@ -73,8 +78,8 @@ async function wk() {
   /********************************** */
   const _cfgTopItems = [
     "isDeleteTargetAppOnFail", "isCreateAppByZipElseByCopy", "isCopyByNodeElseByChildProcess",
-    "CONFIG_VERSION", "appId",
-    "newVersionApp", "allAppsFolder", "apps"]
+    "dirAboveVersion", "CONFIG_VERSION", "appId",
+    "newVersionApp", "allAppsFolder", "newVersionAppDev", "allAppsFolderDev", "apps"]
   let ok = true
   let missingItems = []
   for (let cfgTopItem of _cfgTopItems) {
@@ -93,13 +98,18 @@ async function wk() {
   __logObj.cfg = __bldCfg
 
   /** 1st log line - program version */
-  let _newVersionApp = __bldCfg.newVersionApp
+  let _newVersionApp = processDir.includes("Sync")
+    ? __bldCfg.newVersionAppDev
+    : __bldCfg.newVersionApp
   if (_newVersionApp.includes(".zip")) {
     _newVersionApp = _newVersionApp.replaceAll(".zip", "")
   }
   _newVersionApp = path.resolve(_newVersionApp)
 
-  const _allAppsFolder = path.resolve(__bldCfg.allAppsFolder)
+  const _allAppsFolder = processDir.includes("Sync")
+    ? path.resolve(__bldCfg.allAppsFolderDev)
+    : path.resolve(__bldCfg.allAppsFolder)
+
   let msg
   msg = `program folder    : -  ${processDir}, prog version: ${__PROGRAM_VERSION}, config version: ${__bldCfg.CONFIG_VERSION}`
   console.log(msg); __logObj.logLines.push(msg)
@@ -137,7 +147,7 @@ async function wk() {
       appsFlaggedArr.push(appName)
     }
   }
-  
+
   //set appNameMaxLen, _appsToBuildArr, _isBuildAtLeastOneApp
   let appNameMaxLen = 0;
   let _appsToBuildArr = []
@@ -154,6 +164,7 @@ async function wk() {
 
   //source folder
   const _fpNewVerApp = path.resolve(_newVersionApp)
+  let _versionDir
   if (true) {/** validate new version app files */
     let filepathIndexDotHtml
     {//** validate new version app exists */
@@ -167,6 +178,21 @@ async function wk() {
         process.exit(1)
       }
     }
+    let ofekAppVersion
+    {
+      const pathDirAboveVersion = path.resolve(_fpNewVerApp, __bldCfg.dirAboveVersion)
+      if (!await exists(pathDirAboveVersion)) {
+        console.error(`FAILED: dir above bersion "${pathDirAboveVersion}" does not exist`)
+        process.exit(1)
+      }
+      let stat = await fs.promises.stat(pathDirAboveVersion)
+      if (!stat.isDirectory()) {
+        console.error(`FAILED: dir above bersion "${pathDirAboveVersion}" is not a folder`)
+        process.exit(1)
+      }
+      ofekAppVersion = await findSingleSubfolder(pathDirAboveVersion)
+    }
+
     /******************************* */
     /** test existence of index.html */
     /******************************* */
@@ -183,33 +209,32 @@ async function wk() {
     /************************************************************************ */
     /** validate new version app index.html ofekAppVersion exists       */
     /************************************************************************ */
-    {/** validate new version app index.html ofekAppVersion exists */
-      let data = await fs.promises.readFile(filepathIndexDotHtml, 'utf8')
-      //let prefix = "<title>"
-      //let suffix = "</title>"
-      //if (data.indexOf(prefix) < 0 || data.indexOf(suffix) < 0) {
-      //  console.error(`FAILED: New-Version file "index.html" is missing "<title>..."</title>" element`)
-      //  process.exit(1)
-      //}
-      let prefix = `const ofekAppVersion = "`
-      if (data.indexOf(prefix) < 0) {
+    /** validate new version app index.html ofekAppVersion exists */
+    {
+      await updateBaseHref(filepathIndexDotHtml, ofekAppVersion);
+
+      let htmlContent = await fs.promises.readFile(filepathIndexDotHtml, 'utf8')
+      // More robust version focusing on capturing quoted value first:
+      const regexQuoted = /<base\s+href\s*=\s*["']([^"']+)["'][^>]*>/is;
+      let match = htmlContent.match(regexQuoted);//
+      if (!(match && match[1] && match[1].split("/").length === 4)) {
         console.error(`FAILED: New-Version file "index.html" ` +
-          `has no definition of "ofekAppVersion" javascript variable`)
+          `has no legal definition of "ofekAppVersion" javascript variable`)
         process.exit(1)
       }
-      if (data.indexOf(`${prefix}${__PROGRAM_VERSION}"`) < 0) {
-        console.error(`FAILED: Version of New-Version-App != Build-Program version`)
-        process.exit(1)
-      }
+      let dirAboveVersion = match[1].split("/")[1]
+      let ofekAppVersion1 = match[1].split("/")[2]
+      _versionDir = `${dirAboveVersion}/${ofekAppVersion1}`
     }
+    //console.log(`versionDir:${_versionDir}`)
     /***************************************** */
     /** test existence of app main config file */
     /***************************************** */
     let fpNewVerAppMainCfg
     {/** validate new version app main cfg exists */
-      fpNewVerAppMainCfg = await getFilepath([_fpNewVerApp, 'config.json'])
+      fpNewVerAppMainCfg = await getFilepath([_fpNewVerApp, _versionDir, 'config.json'])
       if (!fpNewVerAppMainCfg) {
-        console.error(`FAILED: New-Version missing file: "${path.resolve(_fpNewVerApp, 'config.json')}"`)
+        console.error(`FAILED: New-Version missing top config.json file`)
         process.exit(1)
       }
     }
@@ -247,7 +272,8 @@ async function wk() {
       __msgPrefix = `Creating ${outputZipFile} --> `
       stopperInit()
       stopperIntervalFunction()
-      let status = await zipFoldersTree(sourceDir, outputZipFile)
+      //let status = await zipFoldersTree(sourceDir, outputZipFile)
+      let status = await zipDirectory(sourceDir, outputZipFile)
       console.log(__msgPart2); __logObj.logLines.push((__msgPart1 + __msgPart2))
       stopperClear()
       if (!status) {
@@ -268,6 +294,7 @@ async function wk() {
       `${String(__msgObj.length).padStart(2, " ")}]: ` +
       `${__msgObj.appFoldername}${spaces} --> `
     let bldCfgAppObjCurr = _appsObj[appFoldername]
+    bldCfgAppObjCurr.portalUrl = bldCfgAppObjCurr?.map?.portalUrl
     let toBuild = _appsToBuildArr.includes(appFoldername)
     let mode = toBuild ? (appPathTarget === _newVersionApp ? "modify" : "generate") : "skip"
     let sp1 = ""
@@ -369,11 +396,12 @@ async function wk() {
             if (zipFilePath.indexOf(".zip") === -1) {
               zipFilePath += ".zip"
             }
-            let ret = await unzipFile(zipFilePath, appPathTarget)
+            //let ret = await unzipFile(zipFilePath, appPathTarget)
+            let ret = await unzipArchive(zipFilePath, appPathTarget)
             if (!ret) {
               stopperClear()
               console.log(__msgPart2); __logObj.logLines.push(__msgPart1 + __msgPart2)
-              await deleteDir(appPathTarget)
+              //await deleteDir(appPathTarget)
               continue
             }
           } catch (err) {
@@ -463,7 +491,7 @@ async function wk() {
           continue
         }
         //console.log(bldCfgAppObjCurr.itemsInMainCfg.logo.split("/")[1])
-        const logoImageDestinationPath = await getFilepath([appPathTarget, "images",
+        const logoImageDestinationPath = await getFilepath([appPathTarget, _versionDir, "images",
           bldCfgAppObjCurr.itemsInMainCfg.logo.split("/")[1]])
         if (!logoImageDestinationPath) {
           __msgPart2 = (`FAILED: Logo image destination path does not exist: ` +
@@ -485,7 +513,7 @@ async function wk() {
       }//modify target app - 2 - copy customer logo
       {/** modify Search widget config */
         if (bldCfgAppObjCurr.itemsNotInMainCfg.searchSource2IsAdded) {//for Ashkelon
-          let filepathSearchCfg = await getFilepath([appPathTarget, "configs/Search", "config.json"])
+          let filepathSearchCfg = await getFilepath([appPathTarget, _versionDir, "configs/Search", "config.json"])
           if (!filepathSearchCfg) {//tst
             __msgPart2 = (`FAILED: oblique widget config file does not exist: ${filepathSearchCfg}`)
             await stopperClearAsync(appPathTarget)
@@ -520,7 +548,7 @@ async function wk() {
         }
       }/** modify Search widget config */
       {//modify target app - 3 - modify oblique widget config
-        let filepathOrbitWidgetConfig = await getFilepath([appPathTarget, "widgets/screen/coordinate/Orbit", "config.json"])
+        let filepathOrbitWidgetConfig = await getFilepath([appPathTarget, _versionDir, "widgets/screen/coordinate/Orbit", "config.json"])
         if (!filepathOrbitWidgetConfig) {//tst
           __msgPart2 = (`FAILED: oblique widget config file does not exist: ${filepathOrbitWidgetConfig}`)
           await stopperClearAsync(appPathTarget)
@@ -563,14 +591,14 @@ async function wk() {
               publisher = isIdanElseOrbit ? "idan" : "orbit"
             }
             {/** handle widget "images" folder */
-              let imagePathSrc = await getFilepath([appPathTarget, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png"])
+              let imagePathSrc = await getFilepath([appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png"])
               if (!imagePathSrc) {
                 __msgPart2 = (`FAILED: widget "Orbit" icon does not exist: ` +
                   `${path.join(appPathTarget, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png")}`)
                 await stopperClearAsync(appPathTarget)
                 continue
               }
-              let imagePathDst = path.resolve(appPathTarget, "widgets/screen/coordinate/Orbit/images", "icon.png")
+              let imagePathDst = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/images`, "icon.png")
               try {
                 await fs.promises.copyFile(imagePathSrc, imagePathDst)
               } catch (err) {
@@ -582,8 +610,8 @@ async function wk() {
             }
             {/** handle widget css/images folder */
               try {
-                let sourceDir = path.resolve(appPathTarget, `widgets/screen/coordinate/Orbit/css/images/${publisher}`)
-                let destinationDir = path.resolve(appPathTarget, `widgets/screen/coordinate/Orbit/css/images`)
+                let sourceDir = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/css/images/${publisher}`)
+                let destinationDir = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/css/images`)
                 await copyDir(sourceDir, destinationDir, true)
               } catch (err) {
                 const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
@@ -598,7 +626,7 @@ async function wk() {
 
       {//modify target app - 4 - modify main config
         {//validate tgt app config file exists
-          filepathTargetAppConfig = await getFilepath([appPathTarget, "config.json"])
+          filepathTargetAppConfig = await getFilepath([appPathTarget, _versionDir, "config.json"])
           if (!filepathTargetAppConfig) {//tst
             __msgPart2 = (`FAILED: main config file does not exist: ${filepathTargetAppConfig}`)
             await stopperClearAsync(appPathTarget)
@@ -684,7 +712,13 @@ async function wk() {
 }
 async function deleteDir(appPathTarget) {
   if (__isDeleteOnFail) {
-    await fs.promises.rm(appPathTarget, { recursive: true })
+    try {
+      await fs.promises.rm(appPathTarget, { recursive: true })
+    }
+    catch (err) {
+      if (err.code === 'ENOENT') {
+      }
+    }
   }
 }
 async function writeLog() {
@@ -941,13 +975,138 @@ async function unzipFileByAdmZip(zippedPath, targetPath) {
     return ret
   }
 }
+async function zipDirectory(sourceDir, outputZipPath) {
+  /**
+ * Asynchronously zips the contents of a source directory into an output zip file.
+ * Uses try/catch for error handling and returns a boolean status.
+ *
+ * @param {string} sourceDir The absolute or relative path to the source directory.
+ * @param {string} outputZipPath The absolute or relative path for the output ZIP file.
+ * @returns {Promise<boolean>} A promise that resolves to `true` if successful, `false` otherwise.
+ */
+  let ret = false
+  let msgErr = ""
+  try {
+    // 1. Validate source directory
+    try {
+      const stats = await fs.promises.stat(sourceDir);
+      if (!stats.isDirectory()) {
+        ret = false
+        msgErr = `Source path is not a directory: ${sourceDir}`
+        __msgPart2 = (`FAILED: ${msgErr}`)
+        return ret
+      }
+    } catch (err) {
+      ret = false
+      if (err.code === 'ENOENT') {
+        msgErr = `Source directory not found: ${sourceDir}`
+      }
+      else {
+        msgErr = `${err.stack.toString()/*.replaceAll("\n", "")*/}`
+      }
+      __msgPart2 = (`FAILED: ${msgErr}`)
+      return ret
+    }
+
+    // 2. Ensure output directory exists (optional, but good practice)
+    const outputDir = path.dirname(outputZipPath);
+    try {
+      await fs.promises.mkdir(outputDir, { recursive: true });
+    } catch (err) {
+      // Ignore EEXIST error (directory already exists), throw others
+      if (err.code !== 'EEXIST') {
+        //msgErr = `${err.stack.toString()/*.replaceAll("\n", "")*/}`
+        msgErr = `Could not create output directory ${outputDir}: ${err.message}`
+        __msgPart2 = (`FAILED: ${msgErr}`)
+        ret = false
+        return ret
+      }
+    }
+
+    // 3. Create a writable stream for the output zip file
+    const output = fs.createWriteStream(outputZipPath);
+
+    // 4. Initialize the archiver
+    const archive = archiver('zip',//'zip' is the format
+      {
+        zlib: { level: 9 }, // Compression level
+      });
+
+    // --- Core Logic with Promise wrapper for stream events ---
+    // Even with try/catch externally, we need a Promise internally
+    // to wait for the asynchronous stream operations ('close' or 'error')
+    // before the function can return.
+    await new Promise((resolve, reject) => {
+      // Handle errors writing the output file (e.g., disk full)
+      output.on('error', (err) => {
+        console.error('Error writing zip file:', err);
+        reject(err); // Reject the internal promise
+      });
+
+      // Signal that zipping is finished when the output stream closes
+      output.on('close', () => {
+        resolve(); // Resolve the internal promise successfully
+      });
+
+      // Handle fatal errors during archiving
+      archive.on('error', (err) => {
+        console.error('Archiver error:', err);
+        reject(err); // Reject the internal promise
+      });
+
+      // Good practice: Handle warnings (e.g., stat failures ignored)
+      archive.on('warning', (err) => {
+        if (err.code === 'ENOENT') {
+          // Log warning but continue
+          console.warn('Archiver Warning (continuing):', err);
+        } else {
+          // Treat other warnings as errors - potentially reject
+          console.error('Archiver Warning (treated as error):', err);
+          reject(err); // Reject on potentially problematic warnings
+        }
+      });
+
+      // --- Archiving Actions ---
+      archive.pipe(output); // Pipe archiver data to the file
+      archive.directory(sourceDir, false); // Add directory contents to zip root
+      archive.finalize(); // Finalize the archive (important!)
+    });
+
+    // If the await new Promise(...) completed without throwing, we are successful
+    __msgPart2 = (`Zip created.Total bytes: ${archive.pointer()}`)
+    ret = true
+    return ret; // Indicate success
+
+  } catch (error) {
+    // If any error occurred in the try block (validation, mkdir, or the promise rejection)
+    msgErr = `${error.stack.toString()/*.replaceAll("\n", "")*/}`
+    __msgPart2 = (`FAILED: ${msgErr}`)
+    console.error(`Failed to zip directory '${sourceDir}' to '${outputZipPath}':`, error.message);
+
+    // Attempt to clean up potentially partially written file
+    // Use a separate try/catch for cleanup, as it might also fail
+    try {
+      // Check if the file exists before trying to delete
+      await fs.promises.access(outputZipPath, fs.constants.F_OK);
+      await fs.promises.unlink(outputZipPath);
+      console.log(`Cleaned up partially created file: ${outputZipPath}`);
+    } catch (cleanupError) {
+      // Ignore ENOENT (file doesn't exist) or other errors during cleanup attempt
+      if (cleanupError.code !== 'ENOENT') {
+        console.warn(`Warning: Could not clean up file ${outputZipPath} after error:`, cleanupError.message);
+      }
+    }
+    ret = false
+    return ret; // Indicate failure
+  }
+}
 async function zipFoldersTree(sourceDir, outputZipFile) {
   let ret = false
   try {
     // Create a new zip instance
     const zip = new JSZip();
     // Function to recursively zip files and directories
-    async function zipDirectory(dirPath) {
+    async function zipDir(dirPath) {
       const files = await fs.promises.readdir(dirPath);
       for (const file of files) {
         //const filePath = `${dirPath}/${file}`;
@@ -968,7 +1127,7 @@ async function zipFoldersTree(sourceDir, outputZipFile) {
           // next line works only for first sub-dir
           //folderEntry.files[`${Object.keys(folderEntry.files)[0]}`].date = new Date(stats.mtime.getTime())
           // Recursively zip subdirectories
-          await zipDirectory(filePath)
+          await zipDir(filePath)
         } else {
           // Read file content and add it to the zip archive
           const content = await fs.promises.readFile(filePath);
@@ -982,7 +1141,7 @@ async function zipFoldersTree(sourceDir, outputZipFile) {
       }
     }
     // Start zipping from the source directory
-    await zipDirectory(sourceDir);
+    await zipDir(sourceDir);
     // Generate the zip content as a Node.js buffer
     const content = await zip.generateAsync({ type: 'nodebuffer' });
     // Write the zip content to the output file
@@ -992,10 +1151,144 @@ async function zipFoldersTree(sourceDir, outputZipFile) {
     ret = true
   } catch (err) {
     ret = false
-    const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
+    const msgErr = `${err.stack.toString()/*.replaceAll("\n", "")*/}`
     __msgPart2 = (`FAILED: ${msgErr}`)
   } finally {
     return ret
+  }
+}
+async function unzipArchive(zipFilePath, outputDir) {
+  /**
+ * Asynchronously unzips a zip archive to a specified directory.
+ * Uses try/catch for error handling and returns a boolean status.
+ *
+ * @param {string} zipFilePath The absolute or relative path to the source ZIP file.
+ * @param {string} outputDir The absolute or relative path to the directory where files should be extracted.
+ * @returns {Promise<boolean>} A promise that resolves to `true` if successful, `false` otherwise.
+ */
+  //console.log(`Attempting to unzip '${zipFilePath}' to '${outputDir}'...`);
+  let ret = false
+  let msgErr = ""
+  try {
+    const newVersionAppDir = zipFilePath.replaceAll(".zip", "")
+    // 1. Validate source zip file existence
+    try {
+      await fs.promises.access(zipFilePath, fs.constants.F_OK | fs.constants.R_OK); // Check exists and read permission
+    }
+    catch (err) {
+      if (err.code === 'ENOENT') {
+        msgErr = `Source zip file not found: ${zipFilePath}`
+      } else if (err.code === 'EACCES') {
+        msgErr = `Permission denied reading zip file: ${zipFilePath}`
+      } else {
+        msgErr = `${err.stack.toString()/*.replaceAll("\n", "")*/}`
+      }
+      __msgPart2 = (`FAILED: ${msgErr}`)
+      return ret
+    }
+
+    // Validate it's likely a file (basic check)
+    const stats = await fs.promises.stat(zipFilePath);
+    if (!stats.isFile()) {
+      msgErr = `Source path is not a file: ${zipFilePath}`
+      __msgPart2 = (`FAILED: ${msgErr}`)
+      return ret
+    }
+
+    // 2. Ensure output directory exists (create if it doesn't)
+    try {
+      await fs.promises.mkdir(outputDir, { recursive: true });
+      //console.log(`Ensured output directory exists: ${outputDir}`);
+    }
+    catch (err) {
+      // We generally want mkdir to succeed or the dir to exist.
+      // Check if it failed *and* the directory doesn't exist now.
+      try {
+        await fs.promises.access(outputDir, fs.constants.W_OK); // Check write permission if it exists
+        // If mkdir failed but we have write access, maybe it was EEXIST, which is okay. Log potentially.
+        // console.warn(`mkdir failed (may already exist), but write access confirmed for ${outputDir}`);
+      } catch (accessErr) {
+        msgErr = `Could not create or access output directory ${outputDir}: ${err.message}`
+        __msgPart2 = (`FAILED: ${msgErr}`)
+        return ret
+      }
+    }
+
+    // 3. Perform the unzipping using streams and await a promise
+    // Create a readable stream from the zip file.
+    const readStream = fs.createReadStream(zipFilePath);
+
+    // Create the unzipper extract stream.
+    const extractStream = unzipper.Extract({ path: outputDir });
+
+    // Wrap stream piping in a Promise to await completion/error
+    await new Promise((resolve, reject) => {
+      // Handle errors on the read stream (e.g., file disappears during read)
+      readStream.on('error', (err) => {
+        console.error('Error reading zip file stream:', err.message);
+        reject(err); // Reject the internal promise
+      });
+
+      // Handle errors during the extraction process
+      extractStream.on('error', (err) => {
+        console.error('Error during extraction process:', err);
+        reject(err); // Reject the internal promise
+      });
+
+      // The 'close' event on the *extractStream* signifies completion.
+      // Note: 'finish' might fire earlier before all data is flushed. 'close' is safer.
+      extractStream.on('close', () => {
+        //console.log(`Extraction stream closed for ${zipFilePath}.`);
+        resolve(); // Resolve the internal promise successfully
+      });
+
+      // Start the process by piping the read stream into the extract stream
+      readStream.pipe(extractStream);
+    });
+
+    // If the await new Promise(...) completed without throwing, extraction was successful.
+    ret = true
+    //console.log(`Successfully unzipped '${zipFilePath}' to '${outputDir}'`);
+    try {
+      //ret = await scanAndCopyDates(newVersionAppDir, outputDir, false)
+    } catch (err) {
+      ret = false
+      //console.error("error: ", err)
+      const msgErr = `${err.stack.toString()/*.replaceAll("\n", "")*/}`
+      __msgPart2 = (`FAILED: Failed to copy dir dates from "${zipFilePath}" to "${outputDir}": ${msgErr}`)
+    }
+    return ret // Indicate success
+
+  }
+  catch (error) {
+    // Catch any error from validation or the Promise rejection
+    // This catch block handles:
+    // 1. Rejections from the internal Promise (stream errors)
+    // 2. Any unexpected errors from fs operations not caught by inner try/catch (less likely with the checks above)
+    const msgErr = `${error.stack.toString()/*.replaceAll("\n", "")*/}`
+    __msgPart2 = (`FAILED: Error during unzip: ${msgErr}`)
+    // It's often helpful to log the full error object for details during debugging
+    // console.error(error);
+
+    // Optional: Attempt to clean up the output directory if an error occurred
+    // This prevents partially extracted files from being left behind.
+    //try {
+    //  //__msgPart2 += `\n    Attempting cleanup of potentially incomplete extraction in ${outputDir}...`;
+    //  // Check if outputDir actually exists before trying to remove it
+    //  await fs.promises.access(outputDir, fs.constants.F_OK);
+    //  await fs.promises.rm(outputDir, { recursive: true, force: true }); // Use rm for directories
+    //  __msgPart2 += `    \nCleaned up potential incomplete extraction in output directory: ${outputDir}`;
+    //} catch (cleanupError) {
+    //  // Ignore errors during cleanup (e.g., directory didn't exist, permission issues)
+    //  if (cleanupError.code !== 'ENOENT') {
+    //    __msgPart2 += `\n\nWarning: Could not fully clean up output directory ${outputDir} after error: ${cleanupError.message}`;
+    //  } else {
+    //    // If ENOENT, the directory wasn't created or was already gone, which is fine.
+    //    //console.log(`Output directory ${outputDir} not found during cleanup (expected if error occurred early).`);
+    //  }
+    //}
+
+    return ret; // Indicate failure
   }
 }
 async function unzipFile(sourceFile, destinationDir) {
@@ -1037,7 +1330,7 @@ async function unzipFile(sourceFile, destinationDir) {
     } catch (err) {
       ret = false
       //console.error("error: ", err)
-      const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
+      const msgErr = `${err.stack.toString()/*.replaceAll("\n", "")*/}`
       __msgPart2 = (`FAILED: Failed to copy dir dates from "${sourceFile}" to "${destinationDir}": ${msgErr}`)
     }
   } catch (err) {
@@ -1096,6 +1389,125 @@ async function scanAndCopyDates(sourcePath, targetPath, isOperateOnDirsOnly) {
     }
   }//kernel
 }
+async function findSingleSubfolder(parentDir) {
+  try {
+    // 1. Read directory contents asynchronously, getting Dirent objects
+    //    Dirent objects contain info like whether an entry is a directory or file.
+    const entries = await fs.promises.readdir(parentDir, { withFileTypes: true });
+
+    // 2. Filter the entries to keep only directories
+    const subdirectories = entries.filter(entry => entry.isDirectory());
+
+    // 3. Check if exactly one subdirectory was found
+    if (subdirectories.length === 1) {
+      // 4. Return the name of that single subdirectory
+      return subdirectories[0].name;
+    } else {
+      // Handle cases where zero or more than one subdirectory exists
+      if (subdirectories.length === 0) {
+        console.error(`FAILED: No subdirectories found in '${parentDir}'.`);
+      } else {
+        const dirNames = subdirectories.map(d => d.name).join(', ');
+        console.error(`FAILED: Found ${subdirectories.length} subdirectories in '${parentDir}' (Expected 1): ${dirNames}.`);
+      }
+      process.exit(1)
+    }
+
+  } catch (error) {
+    // 5. Handle errors during the file system operation (e.g., directory not found, permissions)
+    if (error.code === 'ENOENT') {
+      console.error(`FAILED: Directory not found at '${parentDir}'.`);
+    } else if (error.code === 'EACCES') {
+      console.error(`FAILED: Permission denied to read directory '${parentDir}'.`);
+    } else {
+      console.error(`FAILED: Error reading directory '${parentDir}':`, error); // Log unexpected errors
+    }
+    process.exit(1)
+  }
+}
+async function updateBaseHref(filePath, newFolderName) {
+  //console.log(`Attempting to update base href in: ${filePath}`);
+  //console.log(`New folder name: ${newFolderName}`);
+
+  // --- Configuration ---
+  const BASE_TAG_REGEX = /<base\s+href="(\.\/ver\/)([^/]+)(\/)"([^>]*)>/i;
+  // Breakdown:
+  // <base\s+href="   - Matches the start of the tag and href attribute
+  // (\.\/ver\/)     - Capture Group 1: Matches and captures the literal "./ver/"
+  // ([^/]+)         - Capture Group 2: Matches and captures one or more characters that are NOT a slash (the folder name)
+  // (\/)            - Capture Group 3: Matches and captures the trailing slash after the folder name
+  // "               - Matches the closing quote of href
+  // ([^>]*)         - Capture Group 4: Captures any other attributes or characters before the closing > (optional)
+  // >               - Matches the closing >
+  // i               - Case-insensitive flag
+
+  /**
+   * Updates the second folder name in the <base href="./ver/folder/"> tag
+   * within a specified HTML file.
+   *
+   * @async
+   * @param {string} filePath - The path to the index.html file.
+   * @param {string} newFolderName - The new folder name to insert.
+   * @returns {Promise<boolean>} - True if successful, false otherwise.
+   */
+
+  if (!newFolderName || typeof newFolderName !== 'string' || newFolderName.includes('/') || newFolderName.includes('\\')) {
+    console.error('FAILED: Invalid new folder name provided. It cannot be empty or contain slashes.');
+    process.exit(1)
+  }
+
+  try {
+    // 1. Read the HTML file content
+    const htmlContent = await fs.promises.readFile(filePath, 'utf8');
+
+    // 2. Find the base tag using the regex
+    const match = htmlContent.match(BASE_TAG_REGEX);
+
+    if (!match) {
+      console.error(`FAILED: Could not find a matching <base href="./ver/.../"> tag in ${filePath}.`);
+      console.error('Regex used:', BASE_TAG_REGEX);
+      process.exit(1)
+    }
+
+    // 3. Extract parts from the match
+    const fullMatch = match[0]; // The entire matched tag string, e.g., <base href="./ver/old_name/">
+    const prefix = match[1];    // "./ver/"
+    const oldFolderName = match[2]; // "old_name"
+    const suffix = match[3];    // "/"
+    const otherAttributes = match[4] || ""; // Any other attributes like id="...", etc. captured
+
+    //console.log(`Found tag: ${fullMatch}`);
+    //console.log(`Old folder name: ${oldFolderName}`);
+
+    // 4. Construct the new href value
+    const newHrefValue = `${prefix}${newFolderName}${suffix}`; // e.g., "./ver/new_super_folder/"
+
+    // 5. Construct the new full base tag string
+    //    (re-includes any other attributes that were present)
+    const newBaseTag = `<base href="${newHrefValue}"${otherAttributes}>`;
+    //console.log(`New tag will be: ${newBaseTag}`);
+
+    // 6. Replace the old tag string with the new one in the content
+    const modifiedHtmlContent = htmlContent.replace(fullMatch, newBaseTag);
+
+    // 7. Write the modified content back to the file
+    //await fs.promises.writeFile(filePath, modifiedHtmlContent, 'utf8');
+    await fs.promises.writeFile(filePath, modifiedHtmlContent);
+
+    //console.log(`✅ Successfully updated base href in ${filePath}`);
+    return true;
+
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      console.error(`Error: File not found at '${filePath}'.`);
+    } else if (error.code === 'EACCES') {
+      console.error(`Error: Permission denied to read/write file '${filePath}'.`);
+    } else {
+      console.error(`An unexpected error occurred:`, error);
+    }
+    process.exit(1)
+  }
+}
 function evaluateMissingItems(mainCfgItems, currMainCfgObj) {
   let missingItems = []
   for (let cfgItem of mainCfgItems) {//validate new version app config items
@@ -1104,15 +1516,14 @@ function evaluateMissingItems(mainCfgItems, currMainCfgObj) {
     switch (arr.length) {
       case 1:
         switch (cfgItem) {
-          case "isPublicApp"://we allow false, but not undefined
-          case "apiKeyHandler"://we allow null
-          case "mapLayers"://we allow null
-          //case "widgetsToHide":
-          case "cfg3DTilesByYears"://we allow null or empty array
+          case "isPublicApp"://we allow false
+          case "photorealistic3DTilesByYears"://we allow null or empty array
           case "orbit45"://we allow null
           case "orbit360"://we allow null
+          case "mapLayers"://we allow null
+          case "apiKeyHandler"://we allow null
             if (typeof (currMainCfgObj[arr[0]]) !== "undefined") {
-              flg = true
+              flg = true // we don't allow undefined
             }
             break
           default:
