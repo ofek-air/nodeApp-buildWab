@@ -549,6 +549,162 @@
           }
         }
       }
+    },
+    "Haifa_muni": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "חיפה מודל תלת ממד - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "appId": "",
+        "map.itemId": "ca5973023b4747daa224a151b34d97e3",
+        "map.portalUrl": "https://gishaifa.maps.arcgis.com/portal",
+        "logo": "images/app-logo.png",
+        "appName": "חיפה",
+        "mapTitle": "",
+        "appNameEng": "HaifaMuni",
+        "monitorAppName": "Ofek-Haifa-muni-2022",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its EXACT name",
+          "--note--2": "hide groups only for energy companies",
+          "Govmap": false,
+          "Slides": false,
+          "Orbit": true,
+          "groups": false,
+          "Colmobil": true,
+          "Enerpoint": true,
+          "FAEnergyTech": true,
+          "VoltaSolar": true,
+          "Edit3dTeralight": true,
+          "FlightProjects": true
+        },
+        "photorealistic3DTilesByYears": {
+          "2024": [
+            {
+              "title": "3dTiles-Haifa-2024",
+              "url": "https://gis.ofek-air.com/DATA/241262_Haifa_3dml/tileset.json",
+              "visible": true,
+              "offset": 40.4
+            }
+          ]
+        },
+        "orbit45": null,
+        "orbit360": null,
+        "mapLayers": null,
+        "apiKeyHandler": null,
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3895631.8580109333,
+                "y": 3865173.5094356,
+                "z": 1740.3318291353062
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3895631.8580109333,
+                  "y": 3865173.5094356,
+                  "z": 1740.3318291353062
+                },
+                "heading": 359.01558764082336,
+                "tilt": 54.40685775615001
+              }
+            }
+          }
+        }
+      }
+    },
+    "Haifa_muni_public": {
+      "itemsNotInMainCfg": {
+        "whatsapp_sharing_title": "חיפה מודל תלת ממד - שיתוף מיקום",
+        "oblique_app_url": "",
+        "searchSource2IsAdded": false,
+        "searchSource2": null
+      },
+      "itemsInMainCfg": {
+        "appId": "",
+        "map.itemId": "ca5973023b4747daa224a151b34d97e3",
+        "map.portalUrl": "https://gishaifa.maps.arcgis.com/portal",
+        "logo": "images/app-logo.png",
+        "appName": "חיפה",
+        "mapTitle": "מודל תלת ממד",
+        "appNameEng": "HaifaPublic",
+        "monitorAppName": "Ofek-Haifa-Public-2022",
+        "isPublicApp": false,
+        "defaultLayerTitleForFilterAndStatistics": "רחובות",
+        "widgetsToHide": {
+          "--note--1": "true = hide, false = show. You can add any widget, by its EXACT name",
+          "--note--2": "hide groups only for energy companies",
+          "Govmap": false,
+          "Slides": false,
+          "Orbit": true,
+          "groups": false,
+          "Colmobil": true,
+          "Enerpoint": true,
+          "FAEnergyTech": true,
+          "VoltaSolar": true,
+          "Edit3dTeralight": true,
+          "FlightProjects": true
+        },
+        "photorealistic3DTilesByYears": {
+          "2024": [
+            {
+              "title": "3dTiles-Haifa-2024",
+              "url": "https://gis.ofek-air.com/DATA/241262_Haifa_3dml/tileset.json",
+              "visible": true,
+              "offset": 40.4
+            }
+          ]
+        },
+        "orbit45": null,
+        "orbit360": null,
+        "mapLayers": null,
+        "apiKeyHandler": null,
+        "map.mapOptions": {
+          "initialState": {
+            "viewpoint": {
+              "rotation": 359.99994470208867,
+              "scale": 922.7885170514551,
+              "targetGeometry": {
+                "spatialReference": {
+                  "latestWkid": 3857,
+                  "wkid": 102100
+                },
+                "x": 3895631.8580109333,
+                "y": 3865173.5094356,
+                "z": 1740.3318291353062
+              },
+              "camera": {
+                "position": {
+                  "spatialReference": {
+                    "latestWkid": 3857,
+                    "wkid": 102100
+                  },
+                  "x": 3895631.8580109333,
+                  "y": 3865173.5094356,
+                  "z": 1740.3318291353062
+                },
+                "heading": 359.01558764082336,
+                "tilt": 54.40685775615001
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
