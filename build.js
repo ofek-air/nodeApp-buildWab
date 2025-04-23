@@ -15,7 +15,7 @@ import JSZip from 'jszip'
 //import asyncUnzip from 'async-unzip';
 //const { ZipFile, EntryType } = asyncUnzip;
 //import async from 'async'
-const __PROGRAM_VERSION = "v25_04_09"
+const __PROGRAM_VERSION = "v25_04_24"
 const __CONFIG_FILE = '_buildCfg.json'
 const __APPS_LOGOS_FOLDER = "_appsLogos"
 let __bldCfg = null
@@ -577,9 +577,9 @@ async function wk() {
           }
         }//write oblique widget config
         {/** handle Orbit widget icons */
-          if (orbitWidgetCfgObj.isNewTabProj && orbitWidgetCfgObj.urlProject) {
-            let publisher
-            {/** publisher = idan /orbit*/
+          let publisher = "googlemap"
+          if (orbitWidgetCfgObj.isNewTabProj) {
+            {/** publisher = idan/orbit*/
               let newTabUrl = orbitWidgetCfgObj.urlProject.toLowerCase()
               let isIdanElseOrbit = newTabUrl.includes("oblivisionjs") ? true : newTabUrl.includes("publication") ? false : null
               if (isIdanElseOrbit === null) {
@@ -590,35 +590,35 @@ async function wk() {
               }
               publisher = isIdanElseOrbit ? "idan" : "orbit"
             }
-            {/** handle widget "images" folder */
-              let imagePathSrc = await getFilepath([appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png"])
-              if (!imagePathSrc) {
-                __msgPart2 = (`FAILED: widget "Orbit" icon does not exist: ` +
-                  `${path.join(appPathTarget, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png")}`)
-                await stopperClearAsync(appPathTarget)
-                continue
-              }
-              let imagePathDst = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/images`, "icon.png")
-              try {
-                await fs.promises.copyFile(imagePathSrc, imagePathDst)
-              } catch (err) {
-                const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
-                __msgPart2 = (`FAILED: Failed to overwrite Widget "Orbit" icon: ${msgErr}`)
-                await stopperClearAsync(appPathTarget)
-                continue
-              }
+          }
+          {/** handle widget "images" folder */
+            let imagePathSrc = await getFilepath([appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png"])
+            if (!imagePathSrc) {
+              __msgPart2 = (`FAILED: widget "Orbit" icon does not exist: ` +
+                `${path.join(appPathTarget, `widgets/screen/coordinate/Orbit/images/${publisher}`, "icon.png")}`)
+              await stopperClearAsync(appPathTarget)
+              continue
             }
-            {/** handle widget css/images folder */
-              try {
-                let sourceDir = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/css/images/${publisher}`)
-                let destinationDir = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/css/images`)
-                await copyDir(sourceDir, destinationDir, true)
-              } catch (err) {
-                const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
-                __msgPart2 = (`FAILED: Failed to overwrite Widget "Orbit" css/images icons: ${msgErr}`)
-                await stopperClearAsync(appPathTarget)
-                continue
-              }
+            let imagePathDst = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/images`, "icon.png")
+            try {
+              await fs.promises.copyFile(imagePathSrc, imagePathDst)
+            } catch (err) {
+              const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
+              __msgPart2 = (`FAILED: Failed to overwrite Widget "Orbit" icon: ${msgErr}`)
+              await stopperClearAsync(appPathTarget)
+              continue
+            }
+          }
+          {/** handle widget css/images folder */
+            try {
+              let sourceDir = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/css/images/${publisher}`)
+              let destinationDir = path.resolve(appPathTarget, _versionDir, `widgets/screen/coordinate/Orbit/css/images`)
+              await copyDir(sourceDir, destinationDir, true)
+            } catch (err) {
+              const msgErr = `${err.stack.toString().replaceAll("\n", "")}`
+              __msgPart2 = (`FAILED: Failed to overwrite Widget "Orbit" css/images icons: ${msgErr}`)
+              await stopperClearAsync(appPathTarget)
+              continue
             }
           }
         }
@@ -652,9 +652,9 @@ async function wk() {
               await stopperClearAsync(appPathTarget)
               continue
             }
-            if (!bldCfgAppObjCurr.itemsNotInMainCfg.oblique_app_url) {
-              tgtAppMainCfgObj.widgetsToHide.Orbit = true
-            }
+            //if (!bldCfgAppObjCurr.itemsNotInMainCfg.oblique_app_url) {
+            //  tgtAppMainCfgObj.widgetsToHide.Orbit = true
+            //}
             let items = Object.keys(bldCfgAppObjCurr.itemsInMainCfg)
             for (let i = 0; i < items.length; i++) {
               let item = items[i]
