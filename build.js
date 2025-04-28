@@ -1,5 +1,5 @@
 ﻿/** Programmer: Michael Lev mlev.mail@gmail.com 
- * Last edited: 202404-08-19-10 
+ * Last edited: 202504-04-27 
  * Description: program to create WAB apps from last-version-app
  * find all empty lines:
 ^(?:[\t ]*(?:\r?\n|\r))+
@@ -15,7 +15,7 @@ import JSZip from 'jszip'
 //import asyncUnzip from 'async-unzip';
 //const { ZipFile, EntryType } = asyncUnzip;
 //import async from 'async'
-const __PROGRAM_VERSION = "v25_04_24"
+const __PROGRAM_VERSION = "v25_04_27"
 const __CONFIG_FILE = '_buildCfg.json'
 const __APPS_LOGOS_FOLDER = "_appsLogos"
 let __bldCfg = null
